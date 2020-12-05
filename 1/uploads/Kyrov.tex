@@ -1,0 +1,307 @@
+%\documentclass[a4paper,11pt,twoside]{article}
+%\usepackage{vvmph2}
+%\usepackage{rumathbr}
+%
+%
+%\begin{document}
+\udk{517.977}
+\bbk{22.161.6}
+\art{О некотором классе \plb функциональных уравнений}{On a class of functional equations}
+%\support{Здесь могла бы быть информация о поддержке работы грантом}
+
+\fio{Кыров}{Владимир}{Александрович}
+\sdeg{кандидат физико-математических наук}{Candidate of Physical and Mathematical Sciences}
+\pos{доцент кафедры физики и информатики}{Associate Professor,\\ Department of Physics and Informatics}
+\emp{Горно-Алтайский государственный университет}{Gorno-Altai State University}
+\email{kyrovVA@yandex.ru}
+\addr{ул. Ленкина, 1, 649000 г. Горно-Алтайск, Российская Федерация}{Lenkinа St., 1, 649000 Gorno-Altaisk, Russian Federation}
+
+\maketitle
+
+\begin{abstract}
+В этой статье выводятся и решаются функциональные уравнения, возникающие в геометрии. В процессе
+решения функциональные уравнения сначала сводятся к функционально-дифференциальным уравнениям, затем разделением переменных переходим к дифференциальным уравнениям. В~конце решения
+дифференциальных уравнений подставляем в исходное функциональное уравнение.
+\end{abstract}
+
+\keywords{функциональное уравнение, функционально-дифференциальное уравнение, дифференциальное уравнение}{functional equation, functional differential equation, differential equation}
+
+\section*{Введение}
+Простым примером функционального уравнения является уравнение Коши
+$$g(u+v) = g(u) + g(v),$$
+где $g$~--- функция класса $C^1$, $u$ и $v$~--- независимые переменные. Это уравнение решается так: сначала дифференцируем по переменным $u$ и $v$: $ g'(u+v) = g'(u),\,g'(u+v) = g'(v). $
+Далее вычитаем из первого уравнения второе и разделяем переменные: $ g'(u) = g'(v) = a = \const. $ Затем интегрируем и результат подставляем в исходное уравнение, после чего записываем ответ: $g(u) = au.$ Этим же методом в данной работе решаются функциональные уравнения, которые появляются в задаче классификации геометрий локальной максимальной подвижности \cite{kyrov1, kyrov2, kyrov3}.
+
+Геометрия локальной максимальной подвижности~--- это геометрия $n$-мерного пространства, задаваемая метрической функцией $f$, допускающая максимальную группу движений, то есть группу движений размерности $n(n+1)/2$. Только для таких геометрий по метрической функции однозначно находится локальная группа движений, а по этой группе движений восстанавливается метрическая функция. Примерами геометрий максимальной подвижности являются: геометрия Евклида, псевдоевклидова геометрия Минковского, симплектическая, геометрии постоянной кривизны, геометрии Терстона и др. Очевидна их актуальность в современной науке. На данный момент неизвестна полная классификация геометрий локальной максимальной подвижности.
+
+Автором предложен метод классификации геометрий локальной максимальной подвижности, названный методом вложения. Суть этого метода состоит в следующем: по метрической функции $$ g = g(x^1,\ldots,x^{n},y^1,\ldots,y^{n}) $$
+известной $n$-мерной геометрии локальной максимальной подвижности находим все метрические функции вида $$ f = f(g(x^1,\ldots,x^{n},y^1,\ldots,y^{n}),x^{n+1},y^{n+1}), $$ задающие $n+1$-мерные геометрии локальной максимальной подвижности. Решение этой задачи сводится к решению специальных функционально-дифференциальных уравнений. Задача в данной постановке является новой, ранее не решаемой. Часть получаемых результатов известна, а часть нет.
+Проиллюстрируем на примере хорошо известной двумерной евклидовой геометрии \cite{kyrov1}, которая задается метрической функцией $$ g = (x^1 - y^{1})^2 + (x^2 - y^{2})^2. $$ Решая задачу вложения, получаем метрические функции трехмерных геометрий максимальной подвижности (размерность группы движений равна 6): $$ f = (x^1 - y^{1})^2 + (x^2 - y^{2})^2 + (x^3-y^3)^2; $$
+$$ f = (x^1 - y^{1})^2 + (x^2 - y^{2})^2 - (x^3-y^3)^2; $$  $$ f = [(x^1 - y^{1})^2 + (x^2 - y^{2})^2]e^{x^3+y^3}. $$ Первые две геометрии~--- это хорошо известные трехмерные геометрии: евклидова и псевдоевклидова, а третья геометрия~--- новая, ранее неизвестная.
+
+
+
+\section{Постановка задачи и основные результаты}
+Рассмотрим дифференцируемую класса $C^4$ функцию $f:S_f\to R$, где $S_f\subset R^{n+1}\times
+R^{n+1}$~--- открытая  и плотная  область определения. Пусть $U_0\subset R^{n+1}$~--- некоторая  координатная  окрестность, $x,y\in U_0$, причем $\langle x,y\rangle\in S_f$. Рассмотрим окрестности точек $x$ и $y$: $U(x)\subset U_0$ и $U(y)\subset U_0$, причем $\forall x',y'$: $x'\in U(x)$, $y'\in U(y)$, $\langle x',y'\rangle\in S_f$. Обозначим через $U(\langle x,y\rangle)\subset R^{n+1}\times R^{n+1}$~--- некоторую окрестность пары $\langle x,y\rangle$: $U(\langle x,y\rangle)\subset U(x)\times U(y)$. Пусть функция  $f$ имеет один из следующих видов:
+\begin{equation}\label{1.1}
+f(x,y) = \sigma\left(\theta(x,y),w\right);\end{equation}
+\begin{equation}\label{1.2} f(x,y) = \varkappa\left(\theta(x,y),z\right),\end{equation}
+где $\theta$, $\sigma$, $\varkappa$~--- функции класса $C^4$ в этой окрестности, $\theta(x,y)=\theta(x^1,\ldots,x^n,y^1,\ldots,y^n)$, $(x^1,\ldots,x^{n+1})$, $(y^1,\ldots,y^{n+1})$~--- координаты точек $x$ и $y$ соответственно, $w = x^{n+1}-y^{n+1}$, $z = x^{n+1}+y^{n+1}$. Дополнительно потребуем, чтобы в любой точке из $U(\langle x,y\rangle)$ выполнялись неравенства \cite{mikh}
+\begin{equation}\label{1.3} \dfrac{\partial\theta}{\partial x^{i}}\ne0,\,\dfrac{\partial\theta}{\partial y^{i}}\ne0, \end{equation}
+\begin{equation}\label{1.4} \dfrac{\partial \sigma}{\partial\theta}\ne0,\,\dfrac{\partial \sigma}{\partial w}\ne0, \end{equation}
+\begin{equation}\label{1.5} \dfrac{\partial \varkappa}{\partial\theta}\ne0,\,\dfrac{\partial \varkappa}{\partial z}\ne0. \end{equation}
+
+Также будем предполагать, чтобы функция  $f$ была двухточечным инвариантом действия  некоторой группы Ли в пространстве $R^{n+1}$ \cite{ovs}. Множество таких действий задает группу Ли преобразований пространства $R^{n+1}$. Произвольный оператор алгебры Ли этой группы преобразований в окрестности $U(x)$ имеет вид \cite{mikh}:
+\begin{equation}\label{1.6} X = X_1\partial_{x^1}+ \cdots+ X_{n}\partial_{x^{n}} + X_{n+1}\partial_{x^{n+1}}, \end{equation}
+где $X_s = X_s(x^1,\ldots,x^n,x^{n+1})$~--- функции класса $C^3$ в окрестности $U(x)\subset U_0\subset R^{n+1}$, $s
+= 1,\ldots,n+1$. Через операторы записывается  критерий локальной
+инвариантности \cite{ovs}: \begin{equation}\label{1.7} X(x)f(x,y) +
+X(y)f(x,y) = 0. \end{equation}
+
+Равенство \eqref{1.7} расписываем  для  функций \eqref{1.1} и \eqref{1.2}, после простых преобразований получаем:
+\begin{equation}\label{1.8}[X] = (X_{n+1}(x) - X_{n+1}(y))\varphi(\theta,w), \end{equation}
+\begin{equation}\label{1.9}\left[X\right] = (X_{n+1}(x) + X_{n+1}(y))\lambda(\theta,z),\end{equation}
+где введено сокращающее обозначение:
+$$[X] = \sum^{n}_{k=1}\left(X_k(x)\dfrac{\partial\theta}{\partial x^k} +
+X_k(y)\dfrac{\partial\theta}{\partial y^k}\right),$$ причем $\varphi(\theta,w) = -\frac{\partial \sigma}{\partial w}/\frac{\partial \sigma}{\partial \vartheta}$ и $\lambda(\theta,z) = -\frac{\partial \varkappa}{\partial z}/\frac{\partial \varkappa}{\partial \theta}$~--- функции  класса $C^3$ в $U(\langle x,y\rangle)$, а также $\varphi\ne0$, $\lambda\ne0$, поскольку иное противоречит неравенствам \eqref{1.4} и \eqref{1.5}.
+Уравнения  \eqref{1.8} и \eqref{1.9}  являются  функционально-дифференциальными относительно неизвестных компонент оператора \eqref{1.6}, а также функций $\sigma$ и $\varkappa$, и выполняются  тождественно по координатам точек $x$ и $y$ в окрестности $U(\langle x,y\rangle)$.
+
+Дифференцируя уравнения \eqref{1.8} и \eqref{1.9} по переменным $x^{n+1}$ и $y^{n+1}$, а также вводя сокращающее обозначение $Y= X_{n+1}$, получаем новые функционально-дифференциальные уравнения в окрестности $U(\langle x,y\rangle)$:
+\begin{equation}\label{1.10} ((Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}})\varphi'_{w} + (Y(x) - Y(y))\varphi''_{ww} = 0, \end{equation}
+\begin{equation}\label{1.11} ((Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}})\lambda'_{z} + (Y(x) + Y(y))\lambda''_{zz} = 0. \end{equation}
+
+Основным содержанием данной работы является доказательство следующих теорем.
+
+\begin{thm}\label{ttt1}
+В окрестности $U(\langle x,y\rangle)$ функционально-дифференциальное уравнение $\eqref{1.10}$, где $w = x^{n+1} - y^{n+1}$, $Y\ne\const$, $\varphi'_w\ne0$, имеет решения:
+\begin{equation}\label{1.12} Y = C(x^1,\ldots,x^n),\,\varphi = a(\theta)w + b(\theta); \end{equation}
+\begin{equation}\label{1.13} Y = rx^{n+1} + c,\,\varphi = a(\theta)\dfrac{1}{w} + b(\theta); \end{equation}
+\begin{equation}\label{1.14} Y = r(x^{n+1})^2 + c,\,\varphi = a(\theta)\dfrac{1}{w} + b(\theta); \end{equation}
+\begin{equation}\label{1.15} Y =r\cos(\omega x^{n+1} + \alpha) + c,\,\varphi = a(\theta)\text{ctg}\dfrac{\omega w}{2} + b(\theta); \end{equation}
+\begin{equation}\label{1.16} Y =re^{\omega x^{n+1}} + c,\,\varphi = a(\theta)\dfrac{e^{\omega w}}{e^{\omega w}-1} + b(\theta); \end{equation}
+\begin{equation}\label{1.17} Y =r\ch(\omega x^{n+1} + \alpha) + c,\,\varphi = a(\theta)\text{cth}\dfrac{\omega w}{2} + b(\theta); \end{equation}
+\begin{equation}\label{1.18} Y =r\sh(\omega x^{n+1} + \alpha) + c,\,\varphi = a(\theta)\text{th}\dfrac{\omega w}{2} + b(\theta), \end{equation}
+где $r,c,\alpha = \const$, $C(x^1,\ldots,x^n)\ne\const$~--- функция класса $C^3$, $a(\theta), b(\theta)$~--- функции класса $C^3$, $a(\theta)\ne0$. \end{thm}
+
+\begin{thm}\label{ttt2} В окрестности $U(\langle x,y\rangle)$ функционально-дифференциальное уравнение $\eqref{1.11}$, где $z = x^{n+1} + y^{n+1}$, $Y\ne0$, $\lambda'_z\ne0$, имеет решения:
+\begin{equation}\label{1.19} Y = C(x^1,\ldots,x^n),\,\lambda(\theta,z) = a(\theta)z + b(\theta); \end{equation}
+\begin{equation}\label{1.20} Y = rx^{n+1} + c,\,\lambda = a(\theta)\dfrac{1}{rz+2c} + b(\theta); \end{equation}
+\begin{equation}\label{1.21} Y =r\cos(\omega x^{n+1} + \alpha),\,\lambda = a(\theta)\text{tg}\dfrac{\omega z+2\alpha}{2} + b(\theta); \end{equation}
+\begin{equation}\label{1.22} Y =re^{\omega x^{n+1}},\,\lambda = a(\theta)e^{-\omega z} + b(\theta); \end{equation}
+\begin{equation}\label{1.23} Y =r\ch(\omega x^{n+1} + \alpha),\,\lambda = a(\theta)\text{th}\dfrac{\omega z+2\alpha}{2} + b(\theta); \end{equation}
+\begin{equation}\label{1.24} Y =r\sh(\omega x^{n+1} + \alpha),\,\lambda = a(\theta)\text{cth}\dfrac{\omega z+2\alpha}{2} + b(\theta), \end{equation}
+где $r,c,\alpha = \const$, $C(x^1,\ldots,x^n)\ne\const$~--- функция класса $C^3$, $a(\theta), b(\theta)$~--- функции класса $C^3$, $a(\theta)\ne0$. \end{thm}
+
+Заметим, что теоремы \ref{ttt1} и \ref{ttt2} для скалярного произведения (евклидово или псевдоевклидово) доказаны в работе \cite{kyrov4}.
+
+
+\section{Вспомогательные утверждения}
+\begin{lem}\label{lll1} В окрестности $U(\langle x,y\rangle)$ функциональное уравнение
+\begin{equation}\label{2.1} C(x) - C(y) = \xi(\theta(x,y),w), \end{equation} где $C(x)= C(x^1,\ldots,x^n)$~--- функция класса $C^3$, $\xi$~--- функция класса $C^1$, имеет решение \begin{equation}\label{2.2} C(x) = c = \const. \end{equation} \end{lem}
+
+
+\begin{proof} Продифференцируем уравнение \eqref{2.1} по координате $x^{n+1}$, получим $\xi'_{w}=0.$ Значит, $\xi(\theta(x,y),w) = \xi(\theta(x,y))$. Тогда уравнение \eqref{2.1} примет вид:
+\begin{equation}\label{2.3} C(x) - C(y) = \xi(\theta(x,y)). \end{equation}
+
+Далее выделяются два случая: $\xi'_{\theta}=0$ и $\xi'_{\theta}\ne0$.
+
+1. Если в \eqref{2.3} $\xi'_{\theta}=0$, то $C(x) - C(y) = \const$. Разделяя переменные, получаем \eqref{2.2}.
+
+2. Если же в \eqref{2.3} $\xi'_{\theta}\ne0$ в $U(\langle x,y\rangle)$, то для некоторой координаты $x^i$: $\dfrac{\partial C(x)}{\partial x^i} = \xi'_{\theta}\dfrac{\partial \theta(x,y)}{\partial x^i} \ne0$, $i=1,\ldots,n$. Далее от координат $x^i$ переходим к новым координатам $x^{\prime i}$ по формулам: $x^{\prime 1} = x^{\prime 1},\ldots,x^{\prime i-1} = x^{\prime i-1},x^{\prime i} = C(x^1,\ldots,x^n),x^{\prime i+1} = x^{\prime i+1},\ldots,x^{\prime n} = x^{\prime n}.$ Несложно доказать, что якобиан в данной замене координат равен $\dfrac{\partial C(x)}{\partial x^i}$ и поэтому
+отличен от нуля. Тогда в новых координатах уравнение \eqref{2.3} примет вид: $x^{\prime i} - y^{\prime i} = \xi(\theta(x,y)),$ следовательно, по теореме о неявной функции, в $U(\langle x,y\rangle)$ будем иметь: $\theta = \eta(x^{\prime i} - y^{\prime i}),$ где $\eta$~--- некоторая функция класса $C^1$. Поэтому $\dfrac{\partial \theta}{\partial x^{\prime j}}=0$, $j\ne i$, что противоречит неравенству из \eqref{1.3}. Таким образом, справедлива формула \eqref{2.2}. \end{proof}
+
+Аналогично доказывается следующая лемма.
+
+\begin{lem}\label{lll2} В окрестности $U(\langle x,y\rangle)$ функциональное уравнение
+$$ C(x) + C(y) = \xi(\theta(x,y),z), $$ где $C(x)= C(x^1,\ldots,x^n)$~--- функция класса $C^4$, $\xi$~--- функция класса $C^1$, имеет решение $$ C(x) = c = \const. $$ \end{lem}
+
+
+\section{Доказательство теоремы \ref{ttt1}}
+При доказательстве <<по умолчанию>> \ все уравнения решаются в $U(\langle x,y\rangle)$. Вначале заметим, что $Y=\const$ тогда и только тогда, когда $Y(x) - Y(y)=0$. В прямую сторону это очевидно. В обратную сторону применяем разделение переменных: $Y(x) = Y(y)=\const$.
+По условию теоремы $Y\ne\const$, следовательно $Y(x) - Y(y)\ne0$. Тогда от уравнения \eqref{1.10} приходим к новому:
+\begin{equation}\label{3.1} \dfrac{(Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}}}{Y(x) - Y(y)} = -\dfrac{\varphi''_{ww}}{\varphi'_{w}}. \end{equation} Дифференцируя это уравнение сначала по $x^{n+1}$, а затем по $y^{n+1}$, после чего первый результат складываем со вторым, получаем равенство:
+\begin{equation}\label{3.2} (Y(x))''_{x^{n+1}} + (Y(y))''_{y^{n+1}})(Y(x) - Y(y)) - ((Y(x))'_{x^{n+1}})^2 + ((Y(y))'_{y^{n+1}})^2=0. \end{equation}
+Это равенство является функционально-дифференциальным уравнением, которое выполняется тождественно в окрестности $U(\langle x,y\rangle)$.
+
+Возможны два случая: $(Y(x))'_{x^{n+1}} = 0$ и $(Y(x))'_{x^{n+1}}\ne0$.
+
+В первом случае из уравнения \eqref{1.10} получаем $\varphi''_{ww}= 0$, следовательно справедливо решение \eqref{1.12}.
+
+Во втором случае тождество \eqref{3.2} дифференцируем по переменным $x^{n+1}$ и $y^{n+1}$, после чего делим на ненулевое произведение $(Y(x))'_{x^{n+1}}(Y(y))'_{y^{n+1}}\ne0$ и разделяем переменные, затем получаем дифференциальное уравнение: \begin{equation}\label{3.3} (Y(x))'''_{x^{n+1}} + \mu (Y(x))'_{x^{n+1}}  = 0,\,\mu = \const. \end{equation}
+Это уравнение имеет следующие решения:
+\\ при $\mu=0$:
+$$ Y = A(x^1,\ldots,x^n)(x^{n+1})^2 + B(x^1,\ldots,x^n)x^{n+1} + C(x^1,\ldots,x^n); $$
+при $\mu>0$:
+$$ Y = A(x^1,\ldots,x^n)\cos\omega x^{n+1} + B(x^1,\ldots,x^n)\sin\omega x^{n+1} + C(x^1,\ldots,x^n),\,\omega = \sqrt{\mu}; $$
+при $\mu<0$:
+$$ Y = A(x^1,\ldots,x^n)e^{\omega x^{n+1}} + B(x^1,\ldots,x^n)e^{-\omega x^{n+1}} + C(x^1,\ldots,x^n),\,\omega = \sqrt{-\mu}. $$
+Затем найденное подставляем в \eqref{3.2} и получаем:
+\\ при $\mu=0$:
+\begin{equation}\label{3.4} Y = rx^{n+1} + C(x^1,\ldots,x^n); \end{equation}
+\begin{equation}\label{3.5} Y = r(x^{n+1})^2 + c; \end{equation}
+при $\mu>0$:
+\begin{equation}\label{3.6} Y = r\cos(\omega x^{n+1} + p(x^1,\ldots,x^n)) + c,\,\omega = \sqrt{\mu}; \end{equation}
+при $\mu<0$:
+\begin{equation}\label{3.7} Y = A(x^1,\ldots,x^n)e^{\omega x^{n+1}} + c,\,\omega = \pm\sqrt{-\mu}; \end{equation}
+\begin{equation}\label{3.8} Y = r\ch(\omega x^{n+1} + p(x^1,\ldots,x^n)) + c,\,\omega = \sqrt{-\mu}; \end{equation}
+\begin{equation}\label{3.9} Y = r\sh(\omega x^{n+1} + p(x^1,\ldots,x^n)) + c,\,\omega = \sqrt{-\mu}; \end{equation}
+причем $r,c = \const,$ $r\ne0$.
+
+Далее функцию \eqref{3.4} подставляем в уравнение \eqref{3.1}
+\begin{equation}\label{3.10} \dfrac{2r}{rw + C(x^1,\ldots,x^n) - C(y^1,\ldots,y^n)} = - \dfrac{\varphi''_{ww}}{\varphi'_{w}}. \end{equation}
+К уравнению \eqref{3.10} применяем лемму \eqref{lll1}, получаем $C(x^1,\ldots,x^n) = c = \const.$ Значит уравнение \eqref{3.10} принимает более простой вид:
+$$ \dfrac{2}{w} = - \dfrac{\varphi''_{ww}}{\varphi'_{w}}. $$
+Интегрируя последнее, получаем: $\varphi = a(\theta)\dfrac{1}{w} + b(\theta)$. Найденное объединяя с \eqref{3.4}, имеем~\eqref{1.13}.
+
+
+Функцию \eqref{3.5} подставляем в уравнение \eqref{3.1}, в результате как и выше получаем: $\varphi = a(\theta)\dfrac{1}{w} + b(\theta)$. Найденное объединяя с \eqref{3.5}, получаем \eqref{1.14}.
+
+Теперь функцию \eqref{3.6} подставляем в уравнение \eqref{3.1} и применяем тригонометрические свойства: $$ -\omega\dfrac{\sin(\omega x^{n+1} + p(x)) + \sin(\omega y^{n+1} + p(y))}{\cos(\omega x^{n+1} + p(x)) - \cos(\omega y^{n+1} + p(y))} = $$$$= \omega\dfrac{\sin\dfrac{\omega z + p(x) + p(y)}{2}\cos\dfrac{\omega w + p(x) - p(y)}{2}}{\sin\dfrac{\omega z + p(x) + p(y)}{2}\sin\dfrac{\omega w + p(x) - p(y)}{2}} = \omega\text{ctg}\dfrac{\omega w + p(x) - p(y)}{2} = -\dfrac{\varphi''_{ww}}{\varphi'_{w}}, $$
+где, например, $p(x) = p(x^1,\ldots,x^n)$, следовательно
+$p(x) - p(y) = -2\omega w - 2\text{arcctg}\dfrac{\varphi''_{ww}}{\omega\varphi'_w}.$
+Применяя к этому равенству лемму \eqref{lll1}, получаем $p(x^1,\ldots,x^n) = \alpha = \const$. В результате имеем уравнение:
+$$ \omega\text{ctg}\dfrac{\omega w}{2} = - \dfrac{\varphi''_{ww}}{\varphi'_{w}}, $$
+интегрируя которое, получаем: $\varphi = a(\theta)\text{ctg}\dfrac{\omega w}{2} + b(\theta)$. В итоге приходим к \eqref{1.15}.
+
+\eqref{3.7} подставляем в  \eqref{3.1}: $$  \omega\dfrac{A(x)e^{\omega x^{n+1}} + A(y)e^{\omega y^{n+1}}}{A(x)e^{\omega x^{n+1}} - A(y)e^{\omega y^{n+1}}} = \omega\dfrac{A(x)/A(y) + e^{-\omega w}}{A(x)/A(y) - e^{-\omega w}} = -\dfrac{\varphi''_{ww}}{\varphi'_{w}}, $$
+где, например, $A(x) = A(x^1,\ldots,x^n)$, следовательно
+$A(x)/A(y) = e^{-\omega w}\dfrac{\varphi''_{ww} - \omega\varphi'_{w}}{\varphi''_{ww} + \omega\varphi'_{w}}.$
+Логарифмируя последнее выражение и применяя лемму \eqref{lll2}, получаем $A(x^1,\ldots,x^n) = r = \const$. Тогда будем иметь дифференциальное уравнение:
+$$ \omega\dfrac{1+e^{-\omega w}}{1-e^{-\omega w}} = - \dfrac{\varphi''_{ww}}{\varphi'_{w}}, $$
+интегрируя которое, получаем: $\varphi = a(\theta)\dfrac{1}{1-e^{-\omega w}} + b(\theta)$. Найденное объединяя с \eqref{3.1}, получаем \eqref{1.16}.
+
+
+И, наконец, функции \eqref{3.8} и \eqref{3.9} подставляем в уравнение \eqref{3.1} и применяем свойства гиперболических функций, потом, как и выше с тригонометрическими функциями, устанавливаем, что $p(x^1,\ldots,x^n) = \alpha = \const.$ В итоге приходим к уравнениям:
+$$ \omega\text{cth}\dfrac{\omega w}{2} = - \dfrac{\varphi''_{ww}}{\varphi'_{w}},\,\omega\text{th}\dfrac{\omega w}{2} = - \dfrac{\varphi''_{ww}}{\varphi'_{w}}. $$
+Интегрируя последние уравнения, получаем: $\varphi = a(\theta)\text{(c)th}\dfrac{\omega w}{2} + b(\theta)$. Найденное объединяя с \eqref{3.8} и \eqref{3.9}, имеем \eqref{1.17} и \eqref{1.18}. Теорема \ref{ttt1} доказана полностью.
+
+
+\section{Доказательство теоремы \ref{ttt2}}
+Эта теорема доказывается как и теорема \ref{ttt1}, поэтому некоторые рассуждения будут упускаться. Как и выше, <<по умолчанию>> все уравнения решаются в $U(\langle x,y\rangle)$. Вначале заметим, что $Y=0$ тогда и только тогда, когда $Y(x) + Y(y)=0$. В прямую сторону это очевидно. В обратную сторону применяем разделение переменных: $Y(x) = -Y(y)=\const= 0$.
+По условию теоремы $Y\ne0$, следовательно $Y(x) + Y(y)\ne0$.
+Тогда от уравнения \eqref{1.11} приходим к новому:
+\begin{equation}\label{4.1} \dfrac{(Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}}}{Y(x) + Y(y)} = -\dfrac{\lambda''_{zz}}{\lambda'_{z}}. \end{equation} Дифференцируя это уравнение сначала по $x^{n+1}$, а затем по $y^{n+1}$, после чего из первого равенства вычитаем второе:
+\begin{equation}\label{4.2} (Y(x))''_{x^{n+1}} - (Y(y))''_{y^{n+1}})(Y(x) + Y(y)) - ((Y(x))'_{x^{n+1}})^2 + ((Y(y))'_{y^{n+1}})^2=0. \end{equation}
+
+Возможны два случая: $(Y(x))'_{x^{n+1}} = 0$ и $(Y(x))'_{x^{n+1}}\ne0$.
+
+В первом случае уравнение \eqref{1.11} имеет решение \eqref{1.19}.
+
+Во втором случае тождество \eqref{4.2} дифференцируем по переменным $x^{n+1}$ и $y^{n+1}$, после чего делим на ненулевое произведение $(Y(x))'_{x^{n+1}}(Y(y))'_{y^{n+1}}\ne0$ и разделяем переменные, затем получаем дифференциальное уравнение \eqref{3.3}. Решения этого уравнения, найденные в теореме \ref{ttt1}, подставляем в \eqref{4.2}:
+\\ при $\mu=0$:
+\begin{equation}\label{4.3} Y = rx^{n+1} + C(x^1,\ldots,x^n); \end{equation}
+при $\mu>0$:
+\begin{equation}\label{4.4} Y = r\cos(\omega x^{n+1} + p(x^1,\ldots,x^n)),\,\omega = \sqrt{\mu}; \end{equation}
+при $\mu<0$:
+\begin{equation}\label{4.5} Y = A(x^1,\ldots,x^n)e^{\omega x^{n+1}},\,\omega = \pm\sqrt{-\mu}; \end{equation}
+\begin{equation}\label{4.6} Y = r\ch(\omega x^{n+1} + p(x^1,\ldots,x^n)),\,\omega = \sqrt{-\mu}; \end{equation}
+\begin{equation}\label{4.7} Y = r\sh(\omega x^{n+1} + p(x^1,\ldots,x^n)),\,\omega = \sqrt{-\mu}; \end{equation}
+причем $r,c = \const,$ $r\ne0$.
+
+Далее поступаем как и при доказательстве теоремы \eqref{ttt1}, то есть функции \eqref{4.3}--\eqref{4.7} подставляем в уравнение \eqref{4.1} и применяем лемму \ref{lll2}, а затем решаем. В итоге получаем \eqref{1.20}--\eqref{1.24}. Теорема \ref{ttt2} доказана полностью.
+
+
+
+\section*{Заключение}
+Условия \eqref{1.3} дают существенные ограничения на выбор функции $\theta$.
+Так, на плоскости $R^2$ функцию $\theta$ можно брать в виде:
+$$ \theta(x,y) = x^1y^1 + x^2y^2, $$
+$$ \theta(x,y) = (x_1-y_1)^2 + (x_2-y_2)^2, $$
+$$ \theta(x,y) = (x_1-y_1)^2 + (x_2-y_2)^3, $$
+$$ \theta(x,y) = x_1y_2 - x_2y_1, $$
+$$ \theta(x,y) = [(x_1-y_1)^2 + (x_2-y_2)^2]e^{2\gamma \text{arctg}\dfrac{x_2-y_2}{x_1-y_1}}, $$
+$$ \theta(x,y) = \dfrac{x_2-y_2}{x_1-y_1}, $$
+то есть для этих функций доказанные здесь результаты верны. А, например, для функций
+$$ \theta(x,y) = x^1y^1 + x^2, $$
+$$ \theta(x,y) = (x_1-y_1)^2 + (y_2)^2 $$
+доказанное выше несправедливо.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{kyrov3}
+\baut{Кыров}{В. А.}
+\btit{Об одном классе функционально-дифференциальных уравнений}[On a class of functional-differential equations]
+\bj{Вестн. Самар. гос. техн. ун-та. Сер.: Физ.-мат. науки}%[Bulletin of Samara State Technical University. Series Physical and Mathematical Sciences]
+\byr{2012}
+\bnum{1 (26)}
+\bpp{31--38}
+\bdoi{https://doi.org/10.14498/vsgtu986}
+\mkpaperr
+
+\bibitem{kyrov4}
+\baut{Кыров}{В. А.}
+\btit{Решение функциональных уравнений, связанных со скалярным произведением}[Solution of functional equations associated with the scalar product]
+\bj{Челябин. физ.-мат. журн.}%[Chelyabinsk Physics and Mathematics Journal]
+\byr{2017}
+\bnum{1 (2)}
+\bpp{30--45}
+\mkpaperr
+
+\bibitem{kyrov1}
+\baut{Кыров}{В. А.}
+\btit{Функциональные уравнения в псевдоевклидовой геометрии}[Functional equations in pseudo-Euclidean geometry]
+\bj{Сиб. журн. индустр. математики}[Journal of Applied and Industrial Mathematics]
+\byr{2010}
+\bnum{4 (13)}
+\bpp{38--51}
+%\bdoi{http://dx.doi.org/10.15688/jvolsu1.2012.2.5}
+\mkpaperr
+
+\bibitem{kyrov2}
+\baut{Кыров}{В. А.}
+\btit{Функциональные уравнения в симплектической геометрии}[Functional equations in symplectic geometry]
+\bj{Тр. ИММ УрО РАН}[Proceedings of the Steklov Institute of Mathematics (Supplementary issues)]
+\byr{2010}
+\bnum{2 (16)}
+\bpp{149--153}
+\mkpaperr
+
+\bibitem{mikh}
+\baut{Михайличенко}{Г. Г.}
+\btit{Математические основы и результаты теории физических структур}[Generalized analytic
+functions]
+\bcity{Горно-Алтайск}[Gorno-Altaisk]
+\bpub{Изд-во Горно-Алтайского гос. ун-та}[Gorno-Altai State University Publ.]
+\byr{2016}
+\bpp{297}
+\mkbookr
+
+\bibitem{ovs}
+\baut{Овсянников}{Л. В.}
+\btit{Групповой анализ дифференциальных уравнений}[Generalized analytic
+functions]
+\bcity{М.}
+\bpub{Наука}
+\byr{1978}
+\bpp{400}
+\mkbookr
+\end{thebibliography}
+
+\begin{summary}
+Differentiable considered class $C^4$ function $f_{1,2}:S_f\to R$, $S_f\subset R^{n+1}\times R^{n+1}$:
+$$ f_1(x,y) = \sigma\left(\theta(x,y),w\right),\, f_2(x,y) = \varkappa\left(\theta(x,y),z\right),
+$$ where $\theta$, $\sigma$, $\varkappa$~--- are functions of class $C^4$, $\theta(x,y)=\theta(x^1,\ldots,x^n,y^1,\ldots,y^n)$, $w = x^{n+1}-y^{n+1}$, $z = x^{n+1}+y^{n+1}$, and the following inequalities hold:
+$$ \dfrac{\partial\theta}{\partial x^{i}}\ne0,\,\dfrac{\partial\theta}{\partial y^{i}}\ne0,\,\dfrac{\partial \sigma}{\partial\theta}\ne0,\,\dfrac{\partial \sigma}{\partial w}\ne0,\,\dfrac{\partial \varkappa}{\partial\theta}\ne0,\,\dfrac{\partial \varkappa}{\partial z}\ne0. $$
+The functions $ f_{1,2} $ are two-point invariants of the action of some Lie group in the space $ R^{n+1}$.
+The criterion of local invariance of such an action for these functions leads to functional differential equations:
+$$ ((Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}})\varphi'_{w} + (Y(x) - Y(y))\varphi''_{ww} = 0,\eqno(1) $$
+$$ ((Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}})\lambda'_{z} + (Y(x) + Y(y))\lambda''_{zz} = 0,\eqno(2) $$
+where $\varphi(\theta,w) = -\frac{\partial \sigma}{\partial w}/\frac{\partial \sigma}{\partial \vartheta}$ and $\lambda(\theta,z) = -\frac{\partial \varkappa}{\partial z}/\frac{\partial \varkappa}{\partial \theta}$.
+
+\textbf{Theorem 1.} {\itshape{In the neighborhood $U(\langle x,y\rangl1.17} Рё \eqref{1.18}. РўРµРѕСЂРµРјР° \ref{ttt1} РґРѕРєР°Р·Р°РЅР° РїРѕР»РЅРѕСЃС‚СЊСЋ.
+
+
+\section{Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ С‚РµРѕСЂРµРјС‹ \ref{ttt2}}
+Р­С‚Р° С‚РµРѕСЂРµРјР° РґРѕРєР°Р·С‹РІР°РµС‚СЃСЏ РєР°Рє Рё С‚РµРѕСЂРµРјР° \ref{ttt1}, РїРѕСЌС‚РѕРјСѓ РЅРµРєРѕС‚РѕСЂС‹Рµ СЂР°СЃСЃСѓР¶РґРµРЅРёСЏ Р±СѓРґСѓС‚ СѓРїСѓСЃРєР°С‚СЊСЃСЏ. РљР°Рє Рё РІС‹С€Рµ, <<РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ>> РІСЃРµ СѓСЂР°РІРЅРµРЅРёСЏ СЂРµС€Р°СЋС‚СЃСЏ РІ $U(\langle x,y\rangle)$. Р’РЅР°С‡Р°Р»Рµ Р·Р°РјРµС‚РёРј, С‡С‚Рѕ $Y=0$ С‚РѕРіРґР° Рё С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, РєРѕРіРґР° $Y(x) + Y(y)=0$. Р’ РїСЂСЏРјСѓСЋ СЃС‚РѕСЂРѕРЅСѓ СЌС‚Рѕ РѕС‡РµРІРёРґРЅРѕ. Р’ РѕР±СЂР°С‚РЅСѓСЋ СЃС‚РѕСЂРѕРЅСѓ РїСЂРёРјРµРЅСЏРµРј СЂР°Р·РґРµР»РµРЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С…: $Y(x) = -Y(y)=\const= 0$.
+РџРѕ СѓСЃР»РѕРІРёСЋ С‚РµРѕСЂРµРјС‹ $Y\ne0$, СЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ $Y(x) + Y(y)\ne0$.
+РўРѕРіРґР° РѕС‚ СѓСЂР°РІРЅРµРЅРёСЏ \eqref{1.11} РїСЂРёС…РѕРґРёРј Рє РЅРѕРІРѕРјСѓ:
+\begin{equation}\label{4.1} \dfrac{(Y(x))'_{x^{n+1}} + (Y(y))'_{y^{n+1}}}{Y(x) + Y(y)} = -\dfrac{\lambda''_{zz}}{\lambda'_{z}}. \end{equation} Р”РёС„С„РµСЂРµРЅС†РёСЂСѓСЏ СЌС‚Рѕ СѓСЂР°РІРЅРµРЅРёРµ СЃРЅР°С‡Р°Р»Р° РїРѕ $x^{n+1}$, Р° Р·Р°С‚РµРј РїРѕ $y^{n+1}$, РїРѕСЃР»Рµ С‡РµРіРѕ РёР· РїРµСЂРІРѕРіРѕ СЂР°РІРµРЅСЃС‚РІР° РІС‹С‡РёС‚Р°РµРј РІС‚РѕСЂРѕРµ:
+\begin{equation}\label{4.2} (Y(x))''_{x^{n+1}} - (Y(y))''_{y^{n+1}})(Y(x) + Y(y)) - ((Y(x))'_{x^{n+1}})^2 + ((Y(y))'_{y^{n+1}})^2=0. \end{equation}
+
+Р’РѕР·РјРѕР¶РЅС‹ РґРІР° СЃР»СѓС‡Р°СЏ: $(Y(x))'_{x^{n+1}} = 0$ Рё $(Y(x))'_{x^{n+1}}\ne0$.
+
+Р’ РїРµСЂРІРѕРј СЃР»СѓС‡Р°Рµ СѓСЂР°РІРЅРµРЅРёРµ \eqref{1.11} РёРјРµРµС‚ СЂРµС€РµРЅРёРµ \eqref{1.19}.
+
+Р’Рѕ РІС‚РѕСЂРѕРј СЃР»СѓС‡Р°Рµ С‚РѕР¶РґРµСЃС‚РІРѕ \eqref{4.2} РґРёС„С„РµСЂРµРЅС†РёСЂСѓРµРј РїРѕ РїРµСЂРµРјРµРЅРЅС‹Рј $x^{n+1}$ Рё $y^{n+1}$, РїРѕСЃР»Рµ С‡РµРіРѕ РґРµР»РёРј РЅР° РЅРµРЅСѓР»

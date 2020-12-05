@@ -1,0 +1,473 @@
+\documentclass[a4paper,11pt,twoside]{article}
+\usepackage{mpcs}
+\usepackage{rumathbr}
+\usepackage{multicol}
+%\usepackage[usenames]{color}
+
+\begin{document}
+	
+\udk{519.65}
+\bbk{22.161.5}
+\art[Коэффициент изопериметричности $\Delta$ при квазиконформном отображении]{Искажение коэффициента изопериметричности треугольника при квазиконформном отображении}{A Distortion of a Triangle Izoperimetricity Coefficient under Quasiconformal Mapping}
+	%\support{Здесь могла бы быть информация о поддержке работы грантом}
+	
+\fio{Шуркаева}{Диана}{Васильевна}
+%\sdeg{кандидат физико-математических наук}{Candidate of Physical and Mathematical Sciences}
+\pos{старший преподаватель кафедры безопасности и информационных технологий}{Senior Lecturer of Department of Safety and Information Technology}
+\emp{Национальный исследовательский университет <<Московский энергетический институт>>}{National Research University <<Moscow Power Engineering Institute>>}
+\email{Diana-547@yandex.ru, ShurkayevaDV@mpei.ru}
+\addr{ул. Красноказарменная, 14, 111250 г. Москва, Российская Федерация}{Krasnokazarmennaya st., 14, 111250 Moscow, Russian Federation}
+	
+\maketitle
+	
+\begin{abstract}
+Приводится оценка искажения коэффицента изопериметричности симлекса при произвольном гомеоморфном отображении через характеристики отображения и исходного симплекса и, как следствие, оценка искажения коэффициента изопериметричности треугольника при квазиконформном и конформном отображениях.
+\end{abstract}
+	
+\keywords{коэффициент изопериметричности треугольника, симплекс, триангуляция, изопериметрическое неравенство, квазиконформное отображение, гомеоморфизм, квазиизометрическое отображение, определитель Кэли-Менгера}{Triangle Izoperimetricity Coefficient, Simplex, Triangulation, Quasiconformal Mapping, Gomeomorphism, Quasi-isometric Embedding, Keli-Menger determinant}
+	
+\section*{Введение}
+При решении задач математического моделирования весьма широкое распространие получили треугольные и тераэдральные расчетные сетки \cite{Shur-VF, Shur-EZhK, Shur-BSO}. При этом возникает необходимость оценки погрешности полученного решения, которая зависит от степени невырожденности треугольников триангуляции. Когда ячейки триангуляции сильно деформированы, то есть сильно отличаются от правильных, точность выполняемых расчетов резко снижается. Поэтому независимо от применяемого численного метода, основной целью при построении треугольной сетки на плоскости является сокращение в ней количества ячеек с углами, близкими к 0 и 180°. Для оценки качества треугольной ячейки обычно вводят какой-нибудь числовой показатель, характеризующий степень отклонения ячейки от правильного треугольника, например, величина минимального угла треугольника, радиус описанной окружности и другие. В работе \cite{Shur-BaPe} обсуждаются и сравниваются между собой способы оценки качества ячейки, встречающиеся в литературе по построению сеток. 
+
+\begin{dfn}
+Пусть $ P_0,P_1, \dots, P_n \in \mathbb{R}^n $ такой набор точек, что векторы $P_1-P_0, \dots,P_n-P_0$ линейно независимы. Симплексом $\Delta$ с вершинами в этих точках мы назовем выпуклую оболочку множества $\{P_0, \dots,P_n\}$. 
+\end{dfn}
+	
+%\begin{dfn}
+%Пусть $A\subset \mathbb{R}^n$ -- подмножество пространства $\mathbb{R}^n$. Множество $A$ называется дискретным, если оно замкнуто и все его точки изолированы. 
+%\end{dfn}
+%Из теоремы Больцано-Вейерштрасса следует, что такое множество локально конечно. 
+%\begin{dfn}
+%Пусть $\varepsilon>0$. Дискретной $\varepsilon$-сетью $A$ в $\mathbb{R}^n$  назовем дискретное множество, являющееся $\varepsilon$-сетью. Последнее означает, что для всякой точки $x\in \mathbb{R}^n$ найдется точка $a\in A$, такая, что $|x-a|<\varepsilon$.
+%\end{dfn}
+%В силу локальной конечности дискретной $\varepsilon$-сети можно рассмотреть ее триангуляцию $T$. 
+%\begin{dfn}
+%Триангуляция $T$ представляет собой набор симплексов $\{\Delta_k\}$, где $ k=1,2,...,m$, которые имеют вершинами точки из $A$, попарно непересекаются  по внутренним точкам и объединение которых дает все пространство $\mathbb{R}^n$. 
+%\end{dfn}
+
+\begin{dfn}
+Коэффициентом изопериметричности $n-$мерного симплекса $\Delta$~\cite{Shur-KlSh} будем называть отношение
+$$\sigma (\Delta)=\dfrac{{| \partial \Delta |}^{\frac{n}{n-1}}}{| \Delta |},$$
+соответственно, для треугольника $\Delta$
+$$\sigma (\Delta)=\dfrac{\Pi^2}{S},$$
+где $\Pi$ -- периметр $\Delta$, $S$ -- площадь $\Delta$.
+\end{dfn}
+Величина $\sigma(\Delta)$ характеризует отклонение произвольного симплекса $\Delta$ от правильного, поскольку минимальное значение достигается на правильном симплексе в силу изопериметрического неравенства.
+
+Построение расчетных сеток в областях сложной конфигурации часто осуществляется отображением некоторой стандартной сетки на заданную область различними классами отображений. При этом необходимо контролировать искажение ячеек во избежание появления вырожденных ячеек в расчетной области. В этом направлении получены интересные результаты в работах \cite{Shur-Azar, Shur-BIK, Shur-Kl,Shur-Bol, Shur-Ush, Shur-Mikl}. 
+
+\begin{dfn}
+Отображение $f:\mathbb{R}^n \to \mathbb{R}^n$ называется квазиизометрическим, если существуют постоянные $0 < l \leqslant L$ такие, что для любых двух точек $x_1, x_2 \in \mathbb{R}^n$ выполнено
+\begin{equation*}
+l\vert x_1-x_2\vert \leqslant \vert f(x_1)-f(x_2)\vert \leqslant L\vert x_1-x_2\vert.
+\end{equation*}
+\end{dfn}
+
+\begin{dfn}
+Пусть $\{\rho_{ij}:0 \leqslant i<j \leqslant n \}$ -- совокупность $n(n+1)/2$ переменных. Рассмотрим квадратную $(n+2)\times (n+2)$-матрицу (см. \cite{Shur-Berg})
+\begin{equation*}
+CM_n:=\left( \begin{array}{cccccc} 
+0 & 1 & 1 & 1 & \ldots & 1 \\
+1 & 0 & \rho_{01}^2 & \rho_{02}^2 & \ldots & \rho_{0n}^2 \\
+1 & \rho_{01}^2 & 0 & \rho_{12}^2 & \ldots & \rho_{1n}^2 \\
+1 & \rho_{02}^2 & \rho_{01}^2 & 0 & \ldots & \rho_{2n}^2 \\
+\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \rho_{0n}^2 & \rho_{1n}^2 & \rho_{2n}^2 & \ldots & 0
+\end{array} \right).
+\end{equation*}
+Многочлен от многих переменных $\Gamma _n:= \det (CM_n), \: \rho_{ij}:0 \leqslant i<j \leqslant n$ называется определителем Кэли-Менгера. 
+\end{dfn}
+Определитель Кэли-Менгера дает формулу для вычисления $n$-мерного объема $V$ симплекса $\Delta$ в терминах евклидовых расстояний $\{\rho_{ij}:= |P_i-P_j|:0 \leqslant i<j \leqslant n \}$ между рассматриваемыми точками:
+\begin{equation} \label{volum}
+V^2=\dfrac{(-1)^{n+1}}{2^n(n!)^2} \Gamma_n(\rho_{01},\rho_{02}, \ldots,\rho_{(n-1)n}).
+\end{equation}
+
+Поскольку определитель матрицы $n-$го порядка преставляет собой сумму $n!$ слагаемых, записываемых в виде
+\begin{equation*}
+\det A_n= \sum_{\alpha} (-1)^{| \alpha|}a_{1i_1}a_{2i_2}...a_{ni_n},
+\end{equation*}
+которая берется по всем возможным подстановкам вида
+$$\alpha = \left( \begin{array}{cccc}
+1 & 2 & ... & n \\
+i_1& i_2& ...&i_n
+\end{array} \right),$$
+то справедлива
+
+\begin{lem} Пусть $A_n$ -- квадратная матрица $n$-го порядка, содержащая $n$ нулевых элементов так, что никакие два из них не принадлежат одной строке или столбцу, $B_n$ -- квадратная матрица $n$-го порядка, содержащая $n-1$ нулевых элементов, никакие два из которых не принадлежат одной строке или столбцу, функция $g: M_n \to \mathbb{N}$ сопоставляет квадратной матрице $M_n$ количество нулевых коэффициентов в многочлене определителя (\ref{volum}), тогда значения функции $g(A_n)$ при $n \geq 4$ можно вычислить по рекуррентной формуле
+\begin{multline*}
+g(A_n)=(n-1)!+(n-1)g(B_{n-1}), 
+\\
+\text{где } g(B_{n-1})=g(A_{n-2})+(n-2)g(B_{n-2})
+\\
+\text{и } g(A_2)=g(B_2)=1, g(A_3)=4.
+\end{multline*}
+\end{lem}
+
+Для многочлена объема симплекса справедливо
+\begin{crl} Количество равных нулю коэффициентов в многочлене объема $\det(CM_n)$ составляет $ g(CM_n)=g(A_{n+2})$, количество положительных коэффициентов $p_n=\dfrac{1}{2} \left( (n+2)!-g(CM_n)+(n+1) \right)$, а отрицательных $q_n=\dfrac{1}{2} \left( (n+2)!- g(CM_n)-(n+1)\right)$. 
+\end{crl}
+
+\begin{multicols}{2}
+Приведем значения $g(A_n)$ и $g(B_n)$ для нескольких значений $n$. %обе таблицы на одном уровне сделать
+$$\begin{tabular}{|c|c|c|}
+\hline
+$n$ & $g(A_n)$ & $g(B_n)$ \\
+\hline
+$2$ & 1 & 1  \\
+\hline
+$3$ & 4 & 3  \\
+\hline
+$4$ & 15 & 13  \\
+\hline
+$5$ & 76 & 67  \\
+\hline
+$6$ & 455 & 411  \\
+\hline
+\end{tabular}$$
+
+И несколько первых значений $p_n$ и $q_n$.
+$$\begin{tabular}{|c|c|c|}
+	\hline
+$n$ & $p_n$ & $q_n$ \\
+\hline
+$1$ & 2 & 0  \\
+\hline
+$2$ & 6 & 3  \\
+\hline
+$3$ & 24 & 20  \\
+\hline
+$4$ & 135 & 130  \\
+\hline
+$5$ & 930 & 924  \\
+\hline
+$6$ & 7420 & 7413  \\
+\hline
+\end{tabular}$$
+\end{multicols}
+
+При квазиизометрическом отображении симплекса в работе \cite{Shur-KlSh} автором доказано утверждение
+\begin{thm} Пусть в пространстве $\mathbb{R}^n$ заданы симплекс $\Delta$, максимальное расстояние между вершинами которого равно $\rho_{max}$, минимальное -- $\rho_{min}$, а площадь наименьшей $(n-1)$-мерной грани равна $S$, и квазиизометрическое отображение $f: \mathbb{R}^n \to \mathbb{R}^n$ с константами $\dfrac{L}{l}=k < \sqrt[2n]{1+\dfrac{2n\rho_{min}^{2n-2}\rho_{max}^2-(n-1)\rho_{min}^{2n}}{q_n\rho_{max}^{2n}}}$, тогда для отношения коэффициентов изопериметричности симплекса образа и симплекса прообраза справедливо неравенство
+\begin{equation}
+\dfrac{\sqrt[2(n-1)]{\left( {1-(k^{2(n-1)}-1) \theta_{n-1}}\right) ^n}}{k^n\sqrt{1+ \left(1-k^{-2n} \right) \theta_n}} \leqslant \dfrac{\sigma'}{\sigma} \leqslant
+k^n \dfrac{\sqrt[2(n-1)]{\left( {1+(1-k^{-2(n-1)}) \theta_{n-1}}\right) ^n}}{\sqrt{1- \left(k^{2n}-1 \right) \theta_n}}, \label{Shurk-ikiki}
+\end{equation}
+где $\theta_{n-1}=\dfrac{q_{n-1}\rho_{max}^{2(n-1)}}{r_{n-1}S^2}, \quad 
+\theta_n = \dfrac{q_n \rho_{max}^{2n}}{r_nV^2}, \quad r_n=2^n(n!)^2$. 
+\end{thm}
+
+\section{Гомеоморфное отображение}
+Пусть отображение $ f:D\rightarrow D' \; ( D, D' \subset \mathbb{R}^n)$ гомеоморфно и дифференцируемо почти всюду. Обозначим через
+$\lambda, \Lambda$ -- наименьшее и наибольшее собственные числа оператора $(d_{x_0}f)^T (d_{x_0}f)$ соответственно. Для некоторой внутренней точки $x_0 \in \Delta$, в которой отображение $f$ дифференцируемо, обозначим
+$$B = B(x_0, f, \Delta)=\max_{k=\overline{0,n}} \dfrac{|H_k|}{|P_k-x_0|},$$
+где
+$$ H_k=H(x_0,P_k)=f(P_k)-f(x_0)-d_{x_0}f(P_k-x_0). $$
+Для пары вершин $P_i$ и $P_j$ симплекса введем обозначение
+$$d_{ij}=|P_i-x_0|+|P_j-x_0|, \quad 0\leqslant i < j \leqslant n. $$
+	
+\begin{lem}
+Пусть заданы область $ D \subset \mathbb{R}^n$ и симплекс $ \Delta P_0P_1...P_n \subset D$ с минимальной и максимальной длинами ребра $\rho_{min}$ и $\rho_{max}$ соотвественно, гомеоморфное и дифференцируемое почти всюду отображение $ f:D\rightarrow D' \; ( D' \subset \mathbb{R}^n)$ этой области и некоторая внутренняя точка симплекса $ x_0 \in \Delta $, в которой отображение $f$ дифференцируемо. 
+Тогда отношение коэффициентов изопериметричности симплекса образа и симплекса прообраза оценивается по формуле (\ref{Shurk-ikiki}) с коэффициентом $k=\left(\sqrt{\Lambda}+ B \tau \right) / \left(\sqrt{\lambda}- B \tau \right)$, если 
+$k < \sqrt[2n]{1+\dfrac{2n\rho_{min}^{2n-2}\rho_{max}^2-(n-1)\rho_{min}^{2n}}{q_n\rho_{max}^{2n}}}$, где $\tau =\tau(\Delta, x_0)= \max\limits_{0 \leqslant i < j \leqslant n} \dfrac{d_{ij}}{\rho_{ij}}$.
+\end{lem}
+	
+\begin{proof}
+Для вершин симплекса-образа имеем 
+$$ f(P_j)-f(P_i)= P_j' - P_i' = (d_{x_0}f)(P_j-P_i)+H_j-H_i, \; 0 \leqslant i < j \leqslant n. $$
+		
+Так как $| d_{x_0}f(\xi)|^2=\left\langle d_{x_0}f(\xi),
+d_{x_0}f(\xi)\right\rangle  = \left\langle (d_{x_0}f)^T
+(d_{x_0}f)(\xi), \xi\right\rangle$ для некоторого вектора $ \xi $, тогда
+$ \sqrt{\lambda} |\xi| \leqslant | d_{x_0}f(\xi)| \leqslant \sqrt{\Lambda} |\xi|$. Заметим, что все собственные числа симметрического оператора $ (d_{x_0}f)^T (d_{x_0}f)$ положительны.
+		
+Тогда при всех $0 \leqslant i < j \leqslant n$ длины ребер симплекса
+\begin{multline*}
+\rho'_{ij}=| P_j' - P_i' |= |(d_{x_0}f)(P_j-P_i)+H_j-H_i| \leqslant |(d_{x_0}f)(P_j-P_i)|+|H_j-H_i| \leqslant \\ \leqslant \sqrt{\Lambda}|P_j-P_i|+ B \dot (|P_j-x_0|+|P_i-x_0|) =\sqrt{\Lambda} \rho_{ij}+ B d_{ij}
+= \rho_{ij} \left(\sqrt{\Lambda}+ B \dfrac{d_{ij}}{\rho_{ij}}\right)
+\end{multline*} 
+и
+\begin{multline*}
+\rho'_{ij}=| P_j' - P_i' |= |(d_{x_0}f)(P_j-P_i)+H_j-H_i| \geqslant |(d_{x_0}f)(P_j-P_i)|-|H_j-H_i| \geqslant \\ \geqslant \sqrt{\lambda}|P_j-P_i|- B \dot (|P_j-x_0|+|P_i-x_0|) =\sqrt{\lambda} \rho_{ij}+ B d_{ij}=\rho_{ij} \left(\sqrt{\lambda}- B \dfrac{d_{ij}}{\rho_{ij}}\right).
+\end{multline*} 
+Таким образом получены константы квазиизометрии для гомеоморфизма
+$$\rho_{ij} \left(\sqrt{\lambda}- B \dfrac{d_{ij}}{\rho_{ij}}\right) \leqslant	\rho'_{ij}\leqslant \rho_{ij} \left(\sqrt{\Lambda}+ B \dfrac{d_{ij}}{\rho_{ij}}\right), \: 0 \leqslant i < j \leqslant n.$$
+Выбирая наибольшее из отношений $\dfrac{d_{ij}}{\rho_{ij}}$, получим желаемое.
+\end{proof}
+	
+Для гомеоморфного отображения на плоскости получим следующую оценку 
+\begin{crl}
+	Пусть заданы область $ D \subset \mathbb{R}^2$ и треугольник $ \Delta \subset D $ с длинами сторон $a \geqslant b \geqslant c$, гомеоморфное и дифференцируемое почти всюду отображение $ f:D\rightarrow D' \; ( D' \subset \mathbb{R}^2)$ этой области и некоторая внутренняя точка треугольника $ x_0 \in \Delta $, в которой отображение $f$ дифференцируемо и для коэффициента $k=\left(\sqrt{\Lambda}+ B \tau \right) / \left(\sqrt{\lambda}- B \tau \right)$ в этой точке выполняется  $k<\sqrt[4]{1+\dfrac{4c^2a^2-c^4}{3a^4}}$, где $\tau=\tau(\Delta, x_0)=\max\limits_{0 \leqslant i < j \leqslant n}\dfrac{d_{ij}}{\rho_{ij}}$. 
+	Тогда отношение коэффициентов изопериметричности треугольника образа и треугольника прообраза оценивается по формуле 
+	\begin{equation} 
+	\dfrac{1}{k^2\sqrt{1+ \theta \left(1-k^{-4} \right)}} \leqslant \dfrac{\sigma’}{\sigma} 
+	\leqslant \dfrac{k^2 }{\sqrt{1- \theta (k^4-1)}}, \label{Shurk-gomR2}
+	\end{equation}
+	где $\theta = \dfrac{3 a^4}{16S^2}$.
+\end{crl}
+	
+\section{Квазиконформное отображение}
+\begin{dfn}
+Норма Фробениуса, или евклидова норма \cite{Shur-IK} матрицы $A$ размера $m \times n$ представляет собой частный случай $p$-нормы для $p = 2$: 
+$$\|A\|_{F}={\sqrt {\sum _{i=1}^{m}\sum _{j=1}^{n}a_{ij}^{2}}}.$$
+\end{dfn}	
+
+Напомним, что дифференцируемое квазиконформное отображение $f(x,y)=u(x,y)+iv(x,y)$ удовлетворяет условию \cite{Shur-Volk}
+$$
+\begin{cases}
+\alpha u_x+\beta u_y=v_y,\\
+\beta u_x + \gamma u_y=-v_x,\\
+\alpha \gamma - \beta ^2=1,
+\end{cases}$$
+которое является обобщением условия Коши-Римана.
+
+В случае квазиконформного отображения справедлива 
+\begin{thm}
+Пусть $D, \; D'$ -- области комплексной плоскости $\mathbb{C}$, треугольник $\Delta P_0P_1P_2 \subset D$ с длинами сторон $a \geqslant b \geqslant c$, а $(\cdot) z_0 $ -- центр вписанной окружности треугольника %инцентр
+$ \Delta $, $ f:D\rightarrow D'$ -- дифференцируемое квазиконформное  отображение этих областей.
+Тогда отношение коэффициентов изопериметричности треугольника образа и треугольника прообраза оценивается по формуле (\ref{Shurk-gomR2}) с коэффициентом $k=\dfrac{\|d_{z_0}f\|_F^2 \cdot \sqrt{1+\mu}+\sqrt{2} B \tau}{\|d_{z_0}f\|_F^2 \cdot \sqrt{1-\mu}-\sqrt{2} B \tau}$, если $k<\sqrt[4]{1+\dfrac{4c^2a^2-c^4}{3a^4}}$, при $\mu=\mu(f)=\sqrt{1-\dfrac{4 J_f^2(z_0)}{\|d_{z_0}f\|^4}}$, а $\tau=\tau(\Delta)=\dfrac{2 \sqrt{p}}{\sqrt{b}}\left( \dfrac{\sqrt{c(p-a)}}{a} + \dfrac{\sqrt{a(p-c)}}{c} \right)$, где $p$ -- полупериметр треугольника, а $J_f(z_0)$ -- якобиан отображения $f$ в точке $z_0$.
+\end{thm}
+\begin{proof}
+ Пронумеруем вершины треугольника $P_0, \; P_1, \; P_2$ так, чтобы они находились напротив сторон $a, \; b, \; c$ соответственно. 
+
+Расстояние от вершин $P_0,\; P_1,\; P_2$ до точки $z_0$ по формуле длины биссектрисы и свойству биссектрис делиться точкой пересечения в отношении суммы прилежащих к вершине сторон к противолежащей вычисляется
+$$|P_0-z_0|=\dfrac{b+c}{a} \dfrac{2\sqrt{bcp(p-a)}}{b+c} =\dfrac{2}{a}\sqrt{bcp(p-a)},$$
+$$|P_1-z_0|=\dfrac{2}{b}\sqrt{acp(p-b)},$$
+$$|P_2-z_0|=\dfrac{2}{c}\sqrt{abp(p-c)}.$$
+Рассмотрим $\dfrac{d_{ij}}{\rho_{ij}} (\: 0 \leqslant i<j\leqslant 2)$:
+\begin{multline*}
+\dfrac{d_{21}}{\rho_{21}}=\dfrac{|P_1-z_0|+|P_2-z_0|}{|P_2-P_1|}=\dfrac{2 \sqrt{p}}{\sqrt{a}} \left(\dfrac{\sqrt{c(p-b)}}{b} + \dfrac{\sqrt{b(p-c)}}{c} \right),\\
+\dfrac{d_{20}}{\rho_{20}}=\dfrac{2 \sqrt{p}}{\sqrt{b}} \left(\dfrac{\sqrt{c(p-a)}}{a} + \dfrac{\sqrt{a(p-c)}}{c} \right);\quad
+\dfrac{d_{10}}{\rho_{10}}=\dfrac{2 \sqrt{p}}{\sqrt{c}} \left(\dfrac{\sqrt{a(p-b)}}{b} + \dfrac{\sqrt{b(p-a)}}{a} \right).
+\end{multline*}
+Наибольшим среди рассматриваемых величин является $\dfrac{d_{20}}{\rho_{20}}$, которое возьмем за $\tau$.
+	
+Матрица дифференциала отображения $f$ в точке $z_0$ имеет вид
+\begin{equation*}
+\left( d_{z_0} f \right) = \left(  \begin{array}{cc}
+u_x & u_y \\
+v_x & v_y\\
+\end{array} \right) =
+\left(  \begin{array}{cc}
+u_x & u_y \\
+-\beta u_x - \gamma u_y & \alpha u_x + \beta u_y\\
+\end{array} \right).
+\end{equation*}
+
+Собственные числа находим из уравнения
+\begin{equation*}
+\begin{vmatrix}
+u_x^2+u_y^2-\lambda & -\beta u_x^2 - \gamma u_x u_y+\alpha u_x u_y+ \beta u_y^2 \\
+-\beta u_x^2 - \gamma u_x u_y+\alpha u_x u_y+ \beta u_y^2 & \beta^2 u_x^2 +2\beta \gamma u_x u_y+\gamma^2 u_y^2+ \alpha^2 u_x^2+2\alpha \beta u_x u_y+ \beta^2 u_y^2-\lambda\\
+\end{vmatrix} =0.
+\end{equation*}
+Квадратное уравнение относительно $\lambda$ запишется в виде:
+$$\lambda^2- \|d_{z_0}f\|_F^2 \lambda+J^2_f(z_0)=0.$$
+Тогда собственные числа
+$$
+\lambda_{1,2}=\dfrac{1}{2} \|d_{z_0}f\|_F^2
+\pm \dfrac{1 }{2} \sqrt{\|d_{z_0}f\|_F^4
+	-4 J^2_f(z_0)}=\dfrac{1}{2} \|d_{z_0}f\|_F^2 
+\cdot \left(1 \pm \sqrt{1 - \dfrac{4 J^2_f(z_0)}{\|d_{z_0}f\|_F^4}} \right).
+$$
+Подставив найденные значения в формулу для вычисления коэффициента $k$ получим утверждение теоремы. 
+\end{proof}
+
+\begin{crl}
+Пусть $D, \; D'$ -- области комплексной плоскости $\mathbb{C}$, треугольник $\Delta P_0P_1P_2 \subset D$ с длинами сторон $a \geqslant b \geqslant c$, а $(\cdot) z_0 $ -- центр вписанной окружности треугольника %инцентр
+$ \Delta $, $ f:D\rightarrow D'$ -- конформное  отображение этих областей.
+Тогда отношение коэффициентов изопериметричности треугольника образа и треугольника прообраза оценивается по формуле (\ref{Shurk-gomR2}) с коэффициентом 
+$k=\dfrac{\sqrt{J_f(z_0)}+ B \tau} {\sqrt{J_f(z_0)}- B \tau}$, если $k<\sqrt[4]{1+\dfrac{4c^2a^2-c^4}{3a^4}}$, при $\tau=\tau(\Delta)=\dfrac{2 \sqrt{p}}{\sqrt{b}}\left( \dfrac{\sqrt{c(p-a)}}{a} + \dfrac{\sqrt{a(p-c)}}{c} \right)$, где $p$ -- полупериметр треугольника, а $J_f(z_0)$ -- якобиан отображения $f$ в точке $z_0$.
+\end{crl}
+
+Доказательство следует из того, что при конформном отображении $f(x,y)=u(x,y)+iv(x,y)$ выполняется 
+$$\lambda = \Lambda=J_f (z_0)=u_x^2+u_y^2.$$
+
+\begin{thebibliography}{99}
+
+\bibitem{Shur-Azar} 
+\baut{Азаренок}{Б. Н.}
+\btit{О построении подвижных адаптивных пространственных сеток}[On generation of dynamically adaptive spatial grids]
+\bcity{М.}
+\bpub{Вычислительный центр им. А. А. Дородницына РАН}
+\byr{2007}
+\bpp{50}
+\mkbookr
+	
+\bibitem{Shur-Berg} 
+\baut{Берже}{М.}
+\btit{Геометрия}[Geometry]
+\bcity{М.}
+\bpub{Мир}
+\byr{1984}
+\bvol{1}
+\bpp{560}
+\mkbookr
+
+\bibitem{Shur-BIK} %есть перевод
+\baut{Бобылев}{Н. А.}
+\baut{Иваненко}{С. А.}
+\baut{Казунин}{А. В.}
+\btit{О кусочно-гладких гомеоморфных отображениях ограниченных областей и их приложения к теории сеток}[Piecewise smooth homeomorphisms of bounded domains and their applications to the theory of grids] 
+\bj{Журн. вычисл. мат. и мат. физ.}[Comp. Math. and Math. Phys.]
+\byr{2003}
+\bvol{43}
+\bnum{6}
+\bpp{808--817}[772--781]
+\mkpaperr
+
+\bibitem{Shur-Bol} 
+\baut{Болучевская}{А. В.}
+\btit{Сохранение ориентации симплекса при квазиизометричном отображении}[On the Quasiisometric Mapping Preserving Simplex Orientation]
+\bj{Изв. Сарат. ун-та. Нов. сер. Сер. Математика. Механика. Информатика.}[Izv. Saratov Univ. (N. S.) Ser. Math. Mech. Inform.]
+\byr{2013}
+\bvol{13}
+\bnum{1 (2)}
+\bpp{20--23}
+\mkpaperr
+	
+\bibitem{Shur-VF}
+\baut{Веричев}{А. В.}
+\baut{Федосеев}{В. А.}
+\btit{Система встраивания цифровых водяных знаков на триангуляционной сетке опорных точек изображения}[Digital Image Watermarking on Triangle Grid of Feature Points]
+\bj{Компьютерная оптика}[Computer Optics]
+\byr{2014}
+\bvol{38}
+\bnum{3}
+\bpp{555--563}
+\mkpaperr
+	
+\bibitem{Shur-Volk}
+\baut{Волковыский}{Л. И.}
+\btit{Квазиконформные отображения}[Quasiconformal Mappings]
+\bcity{Львов}
+\bpub{Изд-во Львовского ун-та}
+\byr{1954}
+\bpp{156}
+\mkbookr
+	
+\bibitem{Shur-EZhK}
+\baut{Елизарова}{Т. Г.}
+\baut{Жериков}{А. В.}
+\baut{Калачинская}{И. С.}
+\btit{Численное решение квазигидродинамических уравнений на неструктурированных треугольных сетках}[Numerical Solution of Quasi-Hydrodynamic Equations on Non-Structured Triangle Mesh]
+\bj{Компьютерные исследования и моделирование}[Computer Research and Modeling]
+\byr{2009}
+\bvol{1}
+\bnum{2}
+\bpp{181--188}
+\mkpaperr
+	
+\bibitem{Shur-IK} 
+\baut{Ильин}{В. А.}
+\baut{Ким}{Г. Д.}
+\btit{Линейная алгебра и аналитическая геометрия}[Linear Algebra and Analytical Geometry]
+\bcity{М.}
+\bpub{Изд-во Моск. ун-та}
+\byr{1998}
+\bpp{320}
+\mkbookr
+
+\bibitem{Shur-Kl} 
+\baut{Клячин}{В. А.}
+\btit{О гомеоморфизмах, сохраняющих триангуляцию}[On homeomorphisms preserving triangulation]
+\bj{Записки семинара <<Сверхмедленные процессы>>}[Zapiski seminara <<Sverhmedlennye processy>>]
+\bcity{Волгоград}
+\byr{2009}
+\bpp{169-182}
+\mkprocr
+	
+\bibitem{Shur-KlSh} 
+\baut{Клячин}{В. А.}
+\baut{Шуркаева}{Д. В.}
+\btit{Коэффициент изопериметричности симплекса в задаче аппроксимации производных}[Isoperimetry Coefficient for Simplex in the Problem of Approximation of Derivatives]
+\bj{Изв. Сарат. ун-та. Нов. сер. Сер. Математика. Механика. Информатика}[Izv. Saratov Univ. (N. S.) Ser. Math. Mech. Inform.]
+\bdoi{https://doi.org/10.18500/1816-9791-2015-15-2-151-160}
+\byr{2015}
+\bvol{15}
+\bnum{2}
+\bpp{151--160}
+\mkpaperr
+
+\bibitem{Shur-Mikl} 
+\baut{Миклюков}{В. М.}
+\btit{Геометрический анализ. Дифференциальные формы, почти-решения, почти-квазиконформные отображения}[Geometric analysis. Differential forms, almost-solutions, almost-quasiconformal mappings]
+\bcity{Волгоград}
+\bpub{Изд-во ВолГУ}
+\byr{2007}
+\bpp{532}
+\mkbookr
+	
+\bibitem{Shur-Ush} %есть перевод
+\baut{Ушакова}{О. В.}
+\btit{Условия невырожденности трехмерных ячеек. Формула для объема ячеек}[Nondegeneracy conditions for threedimensional cells and a formula for the cell’s volume]
+\bj{Журн. вычисл. мат. и мат. физ.}[Comp. Math. and Math. Phys.]
+\byr{2001}
+\bvol{41}
+\bnum{6}
+\bpp{881--894}[832--845]
+\mkpaperr
+	
+\bibitem{Shur-BaPe}
+\baut{Baker}{T. J.}
+\baut{Ревay}{P. P.}
+\btit{A comparison of triangle quality measures}[-]
+\bj{Proc. 10th Intern. Meshing Roundtable}
+\bcity{Newport Beach, California}
+\byr{2001}
+\bpp{327--340}
+\mkproce
+	
+\bibitem{Shur-BSO}
+\baut{Bolotova}{Yu. A.}
+\baut{Spitsyn}{V. G.}
+\baut{Osina}{P. M.}
+\btit{A review of algorithms for text detection in images and videos}[-]
+\bj{Computer Optics}
+\byr{2017}
+\bvol{41}
+\bnum{3}
+\bpp{441--452}
+\mkpapere
+	
+\end{thebibliography}
+
+\begin{summary}
+When solving problems of mathematical modeling on triangular and terahedral computational grids, it becomes necessary to estimate the error of the obtained solution, which depends on the degree of non-degeneracy of triangulation triangles. Therefore, long and narrow (<<splinter>>) triangles are avoided. We introduced the ratio $$ \sigma (\Delta) = \dfrac {{|\partial \Delta |}^{\frac {n}{n-1}}}{|\Delta|},$$ called  isoperimetricity coefficient of a $ n- $ dimensional simplex $\Delta $. The value $ \sigma (\Delta) $ characterizes the deviation of an arbitrary simplex $ \Delta $ from the regular simplex, since the minimum value is reached on the regular simplex based on isoperimetric inequality.
+	
+Let the mapping $ f: D \rightarrow D \; (D, D \subset \mathbb{R} ^ n) $ is homeomorphic and differentiable almost everywhere. Denote by $ \lambda, \Lambda $ are the smallest and largest eigenvalues of the operator $ (d_{x_0} f)^ T (d_{x_0} f) $, respectively. For some interior point $ x_0 \in \Delta $ at which the mapping $ f $ is differentiable, we denote
+$$ B = B (x_0, f, \Delta) = \max_ {k = \overline {0, n}} \dfrac {| H_k |} {| P_k-x_0 |},РџРѕРґСЃС‚Р°РІРёРІ РЅР°Р№РґРµРЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РІ С„РѕСЂРјСѓР»Сѓ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕСЌС„С„РёС†РёРµРЅС‚Р° $k$ РїРѕР»СѓС‡РёРј СѓС‚РІРµСЂР¶РґРµРЅРёРµ С‚РµРѕСЂРµРјС‹. 
+\end{proof}
+
+\begin{crl}
+РџСѓСЃС‚СЊ $D, \; D'$ -- РѕР±Р»Р°СЃС‚Рё РєРѕРјРїР»РµРєСЃРЅРѕР№ РїР»РѕСЃРєРѕСЃС‚Рё $\mathbb{C}$, С‚СЂРµСѓРіРѕР»СЊРЅРёРє $\Delta P_0P_1P_2 \subset D$ СЃ РґР»РёРЅР°РјРё СЃС‚РѕСЂРѕРЅ $a \geqslant b \geqslant c$, Р° $(\cdot) z_0 $ -- С†РµРЅС‚СЂ РІРїРёСЃР°РЅРЅРѕР№ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° %РёРЅС†РµРЅС‚СЂ
+$ \Delta $, $ f:D\rightarrow D'$ -- РєРѕРЅС„РѕСЂРјРЅРѕРµ  РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЌС‚РёС… РѕР±Р»Р°СЃС‚РµР№.
+РўРѕРіРґР° РѕС‚РЅРѕС€РµРЅРёРµ РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ РёР·РѕРїРµСЂРёРјРµС‚СЂРёС‡РЅРѕСЃС‚Рё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РѕР±СЂР°Р·Р° Рё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РїСЂРѕРѕР±СЂР°Р·Р° РѕС†РµРЅРёРІР°РµС‚СЃСЏ РїРѕ С„РѕСЂРјСѓР»Рµ (\ref{Shurk-gomR2}) СЃ РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРј 
+$k=\dfrac{\sqrt{J_f(z_0)}+ B \tau} {\sqrt{J_f(z_0)}- B \tau}$, РµСЃР»Рё $k<\sqrt[4]{1+\dfrac{4c^2a^2-c^4}{3a^4}}$, РїСЂРё $\tau=\tau(\Delta)=\dfrac{2 \sqrt{p}}{\sqrt{b}}\left( \dfrac{\sqrt{c(p-a)}}{a} + \dfrac{\sqrt{a(p-c)}}{c} \right)$, РіРґРµ $p$ -- РїРѕР»СѓРїРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°, Р° $J_f(z_0)$ -- СЏРєРѕР±РёР°РЅ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ $f$ РІ С‚РѕС‡РєРµ $z_0$.
+\end{crl}
+
+Р”РѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІРѕ СЃР»РµРґСѓРµС‚ РёР· С‚РѕРіРѕ, С‡С‚Рѕ РїСЂРё РєРѕРЅС„РѕСЂРјРЅРѕРј РѕС‚РѕР±СЂР°Р¶РµРЅРёРё $f(x,y)=u(x,y)+iv(x,y)$ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ 
+$$\lambda = \Lambda=J_f (z_0)=u_x^2+u_y^2.$$
+
+\begin{thebibliography}{99}
+
+\bibitem{Shur-Azar} 
+\baut{РђР·Р°СЂРµРЅРѕРє}{Р‘. Рќ.}
+\btit{Рћ РїРѕСЃС‚СЂРѕРµРЅРёРё РїРѕРґРІРёР¶РЅС‹С… Р°РґР°РїС‚РёРІРЅС‹С… РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµРЅРЅС‹С… СЃРµС‚РѕРє}[On generation of dynamically adaptive spatial grids]
+\bcity{Рњ.}
+\bpub{Р’С‹С‡РёСЃР»РёС‚РµР»СЊРЅС‹Р№ С†РµРЅС‚СЂ РёРј. Рђ. Рђ. Р”РѕСЂРѕРґРЅРёС†С‹РЅР° Р РђРќ}
+\byr{2007}
+\bpp{50}
+\mkbookr
+	
+\bibitem{Shur-Berg} 
+\baut{Р‘РµСЂР¶Рµ}{Рњ.}
+\btit{Р“РµРѕРјРµС‚СЂРёСЏ}[Geometry]
+\bcity{Рњ.}
+\bpub{РњРёСЂ}
+\byr{1984}
+\bvol{1}
+\bpp{560}
+\mkbookr
+
+\bibitem{Shur-BIK} %РµСЃС‚СЊ РїРµСЂРµРІРѕРґ
+\baut{Р‘РѕР±С‹Р»РµРІ}{Рќ. Рђ.}
+\baut{Р

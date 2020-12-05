@@ -1,0 +1,1109 @@
+%\documentclass[12pt,twoside]{article}
+%\usepackage{vvmph2}
+%\usepackage{rumathbr}
+
+%\documentclass[11pt]{amsart}
+%\usepackage{amssymb}
+%\usepackage[notref,notcite]{showkeys}
+%\usepackage{latexsym}
+%\usepackage{graphics}
+%\usepackage{mathptmx}
+%\usepackage{amsmath}
+%\usepackage{amsxtra}
+%\usepackage{amstext}
+%\usepackage{amssymb}
+%\usepackage{latexsym}
+%\usepackage{dsfont}
+%\usepackage{verbatim}
+%\usepackage{color}
+%\usepackage{ulem}
+
+
+%\usepackage{environ}
+%\NewEnviron{killcontents}{}
+%\let\proof\killcontents
+%\let\endproof\endkillcontents
+
+%%%%%%%%%%%%%%%%%%%%%%
+%\DeclareMathOperator{\Tr}{Tr}
+%\DeclareMathOperator{\spn}{span}
+%\DeclareMathOperator{\capa}{cap}
+%\DeclareMathOperator{\cont}{cont}
+%\renewcommand*{\Re}{\operatorname{Re}}
+%\renewcommand*{\Im}{\operatorname{Im}}
+%\newcommand{\defeq}{\,:=\,}
+%\newcommand*{\rr}{\mathbb{R}}
+%\newcommand{\ppart}[2]{ \frac{\partial {#1} }{\partial {#2}} }
+
+%\newcommand{\E}{{\mathcal E}}
+%\newcommand{\I}{{\mathbf I}}
+%\newcommand{\J}{{\mathbf J}}
+%\newcommand{\K}{{\mathcal K}}
+
+%\newcommand{\G}{{\mathbf G}}
+%\newcommand{\R}{{\mathbb R}}
+%\newcommand{\ca}{\mathcal}
+%\newcommand{\su}{\subset}
+%\newcommand{\la}{\lambda}
+%\newcommand{\dy}{\mathcal{D}}
+%\newcommand{\vp}{\varphi}
+%\newcommand{\w}{\mathbf{W}_{1,p}}
+%\newcommand{\wa}{\mathbf{W}_{\alpha,p}}
+%\newcommand{\re}{I_1}
+%\newcommand{\sae}{\; \;\sigma-\text{a.e.}}
+%\newcommand{\M}{\mathcal{M}^{+}(\R^n)}
+%\newcommand{\mplus}[1]{\mathcal{M}^+({#1})}
+%\newcommand{\al}{\alpha}
+
+
+\numberwithin{equation}{section}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{remark}[theorem]{Remark}
+%\theoremstyle{myplain}
+%\newtheorem{cor}[theorem]{Corollary}
+%%\newtheorem{prop}[theorem]{Proposition}
+%\theoremstyle{dfntn}
+%\newtheorem{defn}[theorem]{Definition}
+%\allowdisplaybreaks
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\R}{{\mathbb R}}
+%\newcommand{\Cnot}{C_0^{\infty}(\mathbf{R}^n)}
+%\newcommand{\C}{{\mathbf c}}
+%\newcommand{\re}{I_{\al}}
+%\newcommand{\ca}{\mathcal}
+%\newcommand{\su}{\subset}
+%\newcommand{\dy}{\mathcal{D}}
+%\newcommand{\dw}{\mathcal{W}_{\al, p}}
+%\newcommand{\vp}{\varphi}
+%\newcommand{\w}{\mathbf{W}_{1, p}}
+%\newcommand{\wa}{\mathbf{W}_{\al, p}}
+%\newcommand{\M}{M^{+}(\R^n)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \renewcommand{\subjclassname}{\textup{2010} Mathematics Subject  Classification}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\date{\today}
+%\begin{document}
+
+\plang{1}\selectlanguage{english}
+
+\udk{517} \bbk{22.161}
+
+\art{Pointwise estimates of solutions and existence criteria for sublinear elliptic equations}{Поточечные оценки и критерий существования решений\plb сублинейных эллиптических уравнений}
+%\author{Stephen Quinn}\address{Department of Mathematics, University of Missouri, Columbia, MO  65211}\email{stephen.quinn@mail.missouri.edu}
+\fio[Игорь Е. Вербицкий]{Verbitsky}{Igor}{E.}
+\pos{Professor, Department of Mathematics}{Профессор, факультет математики}
+\emp{University of Missouri}{University of Missouri}
+\email{verbitskyi@missouri.edu}
+\addr{Columbia, MO  65211, USA}{Columbia, MO  65211, USA}
+
+\maketitle
+%\subjclass[2010]{Primary 35J61, 42B37; Secondary 31B15, 42B25}
+
+\begin{abstract} We give a survey of recent results on positive solutions to sublinear elliptic equations of the type
+$-Lu+ V \,  u^{q}=f$, where $L$ is an elliptic operator in divergence form, $0<q<1$, $f\geq 0$ and $V$ is a function that may change
+sign, in a domain $\Omega \subseteq \mathbb{R}^{n}$, or in a weighted Riemannian
+manifold, with a  positive Green's function $G$. We discuss the existence, as well as global lower and upper pointwise estimates of classical and weak solutions $u$, and conditions
+that ensure
+$u \in L^r(\Omega)$ or $u \in W^{1, p} (\Omega)$.
+
+Some of these results are applicable to homogeneous sublinear integral equations
+		$ u = G(u^q d \sigma)$  in $\Omega,$
+	where $0<q<1$, and $\sigma=-V$ is a positive  locally finite Borel measure in $\Omega$. Here ${G} (f \, d \sigma)(x) =\int_\Omega G(x, y), \, f(y) \, d \sigma(y)$ is an integral operator with positive  (quasi) symmetric kernel $G$ on $\Omega \times \Omega$ which satisfies the weak maximum principle.
+		This includes positive solutions, possibly singular, to sublinear  equations
+		 involving the fractional Laplacian,
+		\[ (-\Delta)^{\frac{\alpha}{2}} u = \sigma \, u^q, \quad u \ge 0  \quad \text{in} \, \, \Omega, \]
+	where  $0<q<1$, $0 < \alpha < n$ and $u=0$ in $\Omega^c$ and at infinity in domains $\Omega \subseteq \R^n$ with positive Green's function $G$.
+\end{abstract}
+
+\keywords{sublinear elliptic equations, Green's function, weak maximum principle, fractional Laplacian}{сублинейные эллиптические уравнения, функция Грина, слабый принцип максимума, дробный лапласиан}
+
+%\dedicatory{Dedicated to Alexander Grigor'yan on the occasion of his 60th birthday}
+
+%\maketitle
+
+
+\section{Introduction}
+	
+	Let $\Omega$  be a connected open set in  $ \R^n$,  or a weighted Riemannian
+manifold $(M, m)$ (see Sec. \ref{pointwise} below).  We give a survey of recent results on positive solutions $u$ to the sublinear elliptic differential equation%
+\begin{equation}\label{uuq}
+-Lu+V\left( x\right) u^{q}=f, \quad x \in \Omega,
+\end{equation}%
+ where $0<q<1$,  and
+\begin{equation}
+L u= {\rm div} ( \mathcal{A} \nabla u) \label{L}
+\end{equation}%
+is an  elliptic operator with symmetric  coefficients
+$\mathcal{A} = \left( a_{ij} ( x)\right)_{i,j=1}^{n}$ in divergence form, $V$ and $f$ are functions in $\Omega $, and $f\geq 0$. Here $V\left( x\right) $  may change sign, and
+no extra  boundary conditions are imposed  on $V$.
+
+One of the main goals is to obtain global pointwise estimates of $u$ in terms of the function
+$h$ which is defined as the minimal positive solution in $\Omega $ of the equation $%
+-Lh=f,$ where $f \not \equiv 0$.  We also consider positive solutions $u$ to the corresponding homogeneous equation
+\begin{equation}\label{f=0}
+-Lu+V(x) \,  u^{q}=0,
+\end{equation}
+with $f \equiv 0$. In Sec.~\ref{pointwise}, we present lower pointwise estimates of solutions
+to \eqref{uuq} and \eqref{f=0}
+obtained  in \cite{GV1,GV2}.
+
+
+
+
+  There are also analogues of these estimates for positive  (super) solutions $u$ to sublinear integral equations
+  \begin{equation}\label{int-eqn}
+  u + G(V u^q) = F,
+  \end{equation}
+which involve the integral operator
+  $G f (x) = \int_\Omega G(x, y) \, f(y) \, dy$
+    with a general positive kernel $G\colon \Omega\times \Omega \to (0, +\infty]$. If $G=G^\Omega$ is Green's function associated with the elliptic operator $L$ and $F= G f$, then \eqref{int-eqn} is in a sense equivalent to
+    \eqref{uuq}.
+
+     In many cases it is enough to  assume that the kernel $G$ is lower semicontinuous,  symmetric (or quasi-symmetric) and satisfies the weak maximum principle (see \cite{GV2}), which includes many non-local operators, for instance, the fractional Laplacian $(-\Delta)^{\frac{\alpha}{2}}$. This leads to
+     pointwise estimates of solutions for \eqref{int-eqn} in the case where $V=-\sigma\ge 0$, and $\sigma$ is a locally integrable function, or locally finite positive Borel measure in $\Omega$. In particular, we obtain
+sharp pointwise estimates of  solutions (possibly singular) and existence results for
+     the fractional Laplacian equation
+       \begin{equation}
+     \label{frac_lap_eqn}
+      (-\Delta)^{\frac{\alpha}{2}} u =  \sigma \, u^q, \quad u \ge 0  \quad \text{in} \, \, \Omega, \quad u=0
+       \quad \text{in} \, \, \Omega^c,
+      \end{equation}
+     in general domains $\Omega\subset \R^n$ with positive Green's function $G$ for $0<\alpha\le 2$, or nice domains (the entire space $\R^n$, or balls, or half-spaces in $\R^n$) for $0<\alpha<n$.
+
+    For entire solutions on $\Omega=\R^n$ and $V=-\sigma\ge 0$, where $\sigma$ is a locally finite positive Borel measure in $\R^n$, there are more complicated matching upper and lower  bounds given in terms of certain nonlinear potentials of Th. Wolff type \cite{CV1,CV2,CV3}. Earlier pointwise
+estimates for \textit{bounded} positive solutions are due to Brezis and Kamin \cite{BK}.  We consider such results in Sec.~\ref{upper}.
+
+
+
+
+
+    In the case $V=-\sigma\ge 0$, there are necessary and sufficient conditions for the existence of positive solutions $u \in L^q (\Omega, \sigma)$ and
+    $u \in L^q_{{\rm loc}} (\Omega, \sigma)$ to \eqref{int-eqn}. The latter class includes all positive solutions $0<u<+\infty$ $d \sigma$-a.e., and can be characterized either using
+    certain localization techniques developed in \cite{CV2} in the case $ L=(-\Delta)^{\frac{\alpha}{2}}$ and $\Omega=\R^n$, or integral inequalities with weights as in  \cite{QV2} in the general case. These results are discussed in Sec.~\ref{upper} and Sec.~\ref{existence}.
+
+       We also present in Sec. \ref{higher}
+       criteria for the existence of positive solutions to   \eqref{int-eqn} of higher
+    integrability $u \in L^{q+\gamma} (\Omega, \sigma)$
+    ($\gamma>0$), which are easier to characterize and are useful in applications (see \cite{V}). In particular, the case $\gamma=1$, i.e., solutions $u \in L^{1+q}(\Omega, \sigma)$, corresponds to finite energy solutions to sublinear elliptic equations \eqref{f=0}
+    in the Dirichlet space $u \in W^{1, 2}(\Omega)$ for uniformly elliptic operators $L$ in  divergence form.
+
+    Similar criteria for $\gamma>0$ can be applied to deduce conditions on $\sigma$ which ensure the existence of positive solutions $u$ to \eqref{f=0}
+    in Sobolev spaces $W^{1, p}(\Omega)$ and
+    Lebesgue spaces $L^r(\Omega, dx)$ for general domains $\Omega \subseteq \R^n$ with positive Green's functions (see \cite{QV1,QV3}). Some earlier existence results of this type for $\sigma \in L^s(\Omega, dx)$
+     in bounded domains $\Omega$ are due to Boccardo and Orsina \cite{BO,BO2}. Such existence theorems  under more general assumptions on $\sigma$ which include measures (possibly singular with respect to Lebesgue measure) are discussed in Sec.~\ref{Lpsolutions}.
+
+
+\section{Lower pointwise estimates of supersolutions}\label{pointwise}
+
+In this section, we assume that  $\Omega \subseteq \mathbb{R}^{n}$ is a connected open set, and consider the divergence form  operator
+\begin{equation}
+Lu= {\rm div} (\mathcal{A} \nabla u)\left( x\right)= \sum_{i,j=1}^{n}\partial _{x_{i}}\left( a_{ij}\left(
+x\right) \partial _{x_{j}}u\right) ,  \label{Lba}
+\end{equation}%
+where $a_{ij}$ are $C^2$ functions in $\Omega$,  and $a_{ij}=a_{ji}$. Assume
+that $L$ is elliptic, that is, the matrix $\mathcal{A}=\left( a_{ij}\left( x\right)
+\right) $ is positive definite for any $x$ (the uniform ellipticity is not
+required).
+
+
+
+
+Let us assume that the Dirichlet Green function of $L$ in $\Omega $ exists. We
+denote it by $G^{\Omega }\left( x,y\right) $. We set
+\begin{equation*}
+h\left( x\right) = Gf(x)=\int_{\Omega }G^{\Omega }\left( x,y\right) f\left(
+y\right) dy,
+\end{equation*}%
+where $ f \ge 0$ ($f \not\equiv 0$), and assume that $h\left( x\right) <\infty $ for all $x\in \Omega $ (note
+also that $h\left( x\right) >0$ in $\Omega $), and that the integral%
+\begin{equation}
+G(h^q V)(x)=\int_{\Omega }G^{\Omega }\left( x,y\right) h^{q}\left( y\right) V\left(
+y\right) dy  \label{Gh}
+\end{equation}%
+is well-defined.
+
+An interesting special case is when $f\equiv 1$, and $h$ is the solution of the Dirichlet
+problem:
+\begin{equation}
+\begin{cases}
+-L h=1\quad \text{in}\,\,\Omega , \\
+h=0\quad \text{on}\,\,\partial \Omega.
+\end{cases}
+\label{exit-time}
+\end{equation}%
+In other words, $h(x)=\mathbb{E}_{x}[\tau _{\Omega }]$, where $\tau _{\Omega
+}=\inf \{t\!:\,X_{t}\not\in \Omega \}$ is the first exit time from $\Omega $
+of the (rescaled) Brownian motion $X_{t}$, and $x\in \Omega $ is a starting
+point. For bounded $C^{1,1}$ domains $\Omega$, it is well known that $h(x)\simeq d_{\Omega }(x)$, where
+\begin{equation}
+d_{\Omega }(x)=\text{dist}(x,\partial \Omega ).  \label{dOm}
+\end{equation}%
+
+
+
+One of the main results  of \cite{GV1} in the case  $0<q<1$
+is the following global lower
+estimate for a  (super) solution $u>0$ to \eqref{uuq}.
+
+\begin{theorem}
+\label{main-thm2}\label{T1} Let $\Omega \subseteq \R^n$ be a domain with a positive
+Green function $G^{\Omega }$. Suppose $V, \, f\in C(\Omega )$, and  $f\geq
+0,$ $f\not\equiv 0$ in $\Omega $. Let $u\in C^{2}(\Omega )$ satisfy the inequality
+\begin{equation}\label{semilinear2A}
+- L u+Vu^{q}\geq f, \quad  u> 0 \, \, \, \text{in} \, \, \, \Omega.
+\end{equation}%
+ Set $h=G f$ and assume that $h<\infty $ in $\Omega $. Assume also
+that $G^{\Omega }(h^{q}V)(x)$  is well-defined for all $x\in \Omega $. Then the
+following estimate holds for all $x\in \Omega:$
+\begin{equation}
+u(x)\geq h(x)\left[ 1-(1-q)\frac{G (h^{q}V)(x)}{h(x)}%
+\right] _{+}^{\frac{1}{1-q}}.  \label{main}
+\end{equation}
+\end{theorem}
+
+This theorem is actually proved in \cite{GV1} in a more general  context of elliptic operators on
+weighted manifolds $\left( M, m\right) $. We recall that if $M$ is a smooth Riemannian manifold with the Riemannian
+metric tensor $g=\left( g_{ij}\right) $, then the associated Laplace --- Beltrami
+operator $\mathcal{L}_{0}$ acts on $C^{2}$ functions $u$ on $M$ and is given
+in any chart $x_{1},...,x_{n}$ by
+\begin{equation*}
+\mathcal{L}_{0}u=\frac{1}{\sqrt{\det g}}\sum_{i,j=1}^{n}\partial
+_{x_{i}}\left( \sqrt{\det g}g^{ij}\partial _{x_{j}}u\right).
+\end{equation*}%
+Here $\det g$ is the determinant of the matrix $g=\left( g_{ij}\right) $,
+and $\left( g^{ij}\right) $ is the inverse matrix of $\left( g_{ij}\right) $. The Riemannian measure $m_{0}$ is given in the same chart by%
+\begin{equation*}
+dm_{0}=\sqrt{\det g}dx_{1}...dx_{n},
+\end{equation*}%
+so that $\mathcal{L}_{0}$ is symmetric with respect to $m_{0}.$ Using the
+gradient operator $\nabla $ defined by
+\begin{equation*}
+\left( \nabla u\right) ^{i}=\sum_{j=1}^{n}g^{ij}\partial _{x_{j}}u
+\end{equation*}%
+and the divergence ${\rm div}$ on vector fields $F^{i}$%
+\begin{equation*}
+{\rm div}F=\frac{1}{\sqrt{\det g}}\sum_{i=1}^{n}\partial _{x_{i}}\left(
+\sqrt{\det g}F^{i}\right) ,
+\end{equation*}%
+we have
+\begin{equation*}
+\mathcal{L}_{0}={\rm div}\circ \nabla .
+\end{equation*}
+
+
+Now let $\omega $ be a smooth positive function on $M$ and consider the measure $%
+m$ on $M$ given by
+\begin{equation*}
+dm=\omega dm_{0}.
+\end{equation*}%
+The couple $\left( M, m\right) $ is called a weighted manifold, and $\omega $ in this context
+ is called a weight  (see \cite{G}). The
+following operator $\mathcal{L}$
+\begin{equation}
+\mathcal{L}u:=\frac{1}{\omega }{\rm div}\left( \omega \nabla u\right) =%
+\frac{1}{\omega \sqrt{\det g}}\sum_{i,j=1}^{n}\partial _{x_{i}}\left( \omega
+\sqrt{\det g}g^{ij}\partial _{x_{j}}u\right)  \label{Lw}
+\end{equation}%
+acting on $C^{2}$ functions $u$ on $M$, is called the (weighted) Laplace
+operator of $\left( M, m\right) $. This operator $\mathcal{L}$, which is symmetric with respect to measure $m$,
+ can be  used in place of the operator $L$ in  $\Omega \subseteq \R^n$ above.
+
+
+ There is also a similar lower estimate for positive (super) solutions to the homogeneous equation \eqref{f=0}.
+
+%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+\label{main-thm3}\label{T3} Let  $\Omega \subseteq \R^n$ be a domain with a positive Green
+function $G^{\Omega }$. Suppose $V\in C(\Omega )$, and  $u\in C^{2}(\Omega )$
+satisfies the inequality
+\begin{equation}\label{diff2}
+- L u+V\,u^{q}\geq 0,\quad u\geq 0 \,\, \, \text{in} \,\,\, \Omega,
+\end{equation}
+where  $0<q<1$.
+Assume also that $G V (x)$  is well-defined for all $x\in \Omega $.
+
+
+
+Then  the
+following estimate holds for all $x \in \Omega:$
+\begin{equation}
+u(x)\geq \left[ -(1-q)\,G V (x)\right] _{+}^{\frac{1}{1-q}%
+}.  \label{est3-thm3}
+\end{equation}
+\end{theorem}
+
+
+
+
+Similar global pointwise estimates are obtained in \cite{GV1} for \textit{all} exponents  $q \in \R$ ($q \not=0$), but we do  not consider the case $q \not\in (0, 1)$ here. Also, the preceding estimate remains true for {\it nonnegative} solutions $u$
+if the integration in the Green's potentials $G^{\Omega }(h^{q}V)$ and  $G^{\Omega } V$ respectively is taken over the set $\Omega^{+}=\{ x \in \Omega\colon u>0\}$ in place of $\Omega$. Note that the  differential inequalities \eqref{semilinear2A} and \eqref{diff2} in Theorem \ref{main-thm2} and Theorem \ref{main-thm3} respectively are understood in the classical sense.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+
+In the case $V=-\sigma \le 0$, where $\sigma$ is a  locally finite measure in $\Omega$, the preceding estimate yields
+\begin{equation}\label{h-pos}
+u(x)\geq \left[ (1-q) \int_{\Omega}G^{\Omega} (x, y)   d \sigma (y)\right] ^{\frac{1}{1-q}},
+\end{equation}
+which  holds for all non-trivial weak solutions $u$ (possibly singular).
+
+This estimate was obtained for the Laplacian $L =\Delta$ in the case $\Omega=\R^n$ in \cite{BK}, without specifying the sharp constant $(1-q)^{\frac{1}{1-q}}$,
+  under some additional assumptions on $\sigma\ge 0$ (see also \cite{CV3}).
+
+  There are analogues of this estimate for integral operators with general positive kernels $G\colon \Omega\times \Omega \to (0, +\infty]$
+  on a locally compact Hausdorff space $\Omega$ that are lower semicontinuous, symmetric,  and satisfy the weak maximum principle
+  with constant $\mathfrak{b}\ge 1$ (see \cite{GV2}).
+
+   For a locally finite Radon measure $\nu \in \mathcal{M}^{+}(\Omega)$, we denote by $G \nu$ the  potential
+  \[
+  {G}\nu (x) = \int_\Omega G(x, y) \, d \nu(y).
+  \]
+
+  We recall that the  kernel $G$
+	is said to satisfy the \textit{weak maximum principle} (with constant $ \mathfrak{b}\ge 1$) provided that
+		\begin{equation}\label{weak-max}
+		{G}\nu (x) \le M, \quad \forall x \in {\rm supp} \, \nu \,\, \Longrightarrow \, \,  {G}\nu (x) \le \mathfrak{b} \, M, \quad \forall x \in \Omega,
+		\end{equation}
+		for any constant $M>0$ and $\nu \in \mathcal{M}^+(\Omega)$. When $\mathfrak{b}=1$, we say that ${G}$ satisfies the \textit{strong maximum principle}.
+
+
+
+
+
+  These assumptions hold for many non-local operators
+  $L$ of interest in nonlinear analysis, in particular, the fractional Laplacian operators $(-\Delta)^{\frac{\alpha}{2}}$ in domains $\Omega \subseteq \R^n$. For such kernels $G$ and $\sigma \in \mathcal{M}^{+}(\Omega)$, let
+  \[
+  G (f \, d \sigma)(x) = \int_\Omega G(x, y) \, f(y) \, d \sigma(y),  \quad x \in \Omega,
+  \]
+  where $f\ge 0$ is a measurable function.
+
+
+
+  If $u>0$ $d\sigma$-a.e. is a supersolution, i.e.,
+\begin{equation} \label{supersol2}
+G(u^q d \sigma) (x) \le u(x) < \infty \quad d \sigma{\rm-a.e.},
+\end{equation}
+then
+\begin{equation} \label{lowerest2}
+u (x) \ge  (1-q)^{\frac{1}{1-q}} \mathfrak{b}^{-\frac{q}{1-q}}   \Big[ G \sigma (x)\Big]^{\frac{1}{1-q}} \quad d \sigma{\rm-a.e.} \, \, {\rm in} \,\, \Omega.
+\end{equation}
+The constant  $(1-q)^{\frac{1}{1-q}}$ in  \eqref{lowerest2} in the case $\mathfrak{b}=1$ coincides with that in \eqref{h-pos}. Similar results hold for \textit{quasi-symmetric}  kernels $G$
+such that there exists a constant $\mathfrak{a} >0$ for which
+\begin{equation}\label{quasi}
+G(x, y) \le \mathfrak{a} \, G(x, y), \quad x, y \in \Omega,
+		\end{equation}
+with a constant on the right-hand side of \eqref{lowerest2} depending on both $\mathfrak{a}$ and $\mathfrak{b}$. See \cite{An} where quasi-symmetry
+is established for many elliptic operators in non-divergence form. Properties \eqref{weak-max} and
+\eqref{quasi} will be used extensively in Sections \ref{existence} and \ref{Lpsolutions} below.
+
+  \section{Matching upper and lower pointwise estimates of solutions}\label{upper}
+
+  In this section, we discuss recent results established in \cite{CV2} for entire solutions to quasilinear
+  elliptic equations of the type
+\begin{equation}\label{eq1}
+\left\{ \begin{array}{ll}
+-\Delta_pu=\sigma \, u^q & \text{in} \, \, \,  {\R}^n,\\&\\
+\displaystyle{\liminf_{x \to \infty} \, u(x)}=0, & \, \, u>0,
+\end{array} \right.
+\end{equation}
+where  $0<q<p-1$. Here $\Delta_p =\text{div}(\nabla u|\nabla u|^{p-2})$ is the $p$-Laplace operator,
+and $\sigma\ge 0$ is an arbitrary  locally integrable function, or locally finite Borel measure, $\sigma \in \M$; if $\sigma \in L^1_{{\rm loc}} (\R^n)$ we write $ d \sigma= \sigma \, dx$.
+
+
+The main goal  is to give necessary and sufficient conditions on $\sigma$ for the existence of weak solutions to \eqref{eq1},  and obtain matching upper and lower global pointwise bounds for positive solutions.  In this approach,  key integral
+inequalities are identified, and  new nonlinear potentials of Wolff type are constructed that are intrinsic
+to a number of similar problems.
+
+
+
+
+This approach is applicable to general quasilinear $\mathcal{A}$-Laplace operators of divergence type $\text{div} \,  \mathcal{A}(x, \nabla u)$ under standard boundedness and structural assumptions on $\mathcal{A}$, as well as to fully nonlinear $k$-Hessian operators,
+and the fractional Laplacian equations (see \cite{CV2}).
+
+
+
+We will restrict ourselves here to the case $p=2$ and linear operators $\text{div} ( \mathcal{A} \nabla u)$
+under the  uniform ellipticity assumption on the  matrix $ \mathcal{A} \in L^\infty(\R^n)^{n \times n}$. In this setup, the fundamental solution of the $\mathcal{A}$-Laplacian is known to be pointwise equivalent to that of the Laplacian, which reduces the problem to estimates involving Newtonian potentials.
+
+ In fact, we will consider below the fractional Laplacian equations,
+\begin{equation}\label{fraclap}
+\left\{ \begin{array}{ll}
+(-\Delta )^{\frac{\alpha}{2}}u=\sigma \, u^q & \text{in} \, \, \,  \mathbb{R}^n,\\ &\\
+\displaystyle{\liminf_{ x \to \infty} \, u(x)}=0,& \, \, u>0,
+\end{array} \right.
+\end{equation}
+for $0<q<1$ and $0<\alpha < n$; this includes the range $\alpha>2$ where the usual maximum principle is not available.
+
+
+
+
+In the classical case $p=2$,  equation \eqref{eq1}, or equivalently \eqref{fraclap} with $\alpha=2$,
+provides a model {\it sublinear} elliptic problem if $0<q<1$. It is easy to see that it is equivalent to the integral equation $u =N (u^q d \sigma)$, where
+$N \omega=(-\Delta)^{-1} \omega$ is the Newtonian potential of  $d \omega = u^q d \sigma$ on $\R^n$.
+
+
+As we emphasize in \cite{CV2},  such problems are governed by the important   integral inequality
+\begin{equation}\label{weight-endpoint}
+\left(\int_{\R^n} |\varphi|^q \, d \sigma\right)^{\frac 1 q} \le \varkappa \,  \Vert \Delta \varphi \Vert_{L^1(\R^n)},
+\end{equation}
+for all test functions $\varphi \in C^2(\R^n)$ vanishing at infinity such that $-\Delta \varphi \ge 0$. This inequality turns out to be necessary and sufficient for the existence of a positive solution
+$u \in L^q(\R^n, \sigma)$ to  \eqref{eq1} if $p=2$ and $0<q<1$.
+
+Inequality \eqref{weight-endpoint} represents the end-point case of the well-studied $(L^p, L^q)$ trace inequalities for $p>1$. A comprehensive  treatment
+of trace inequalities in that case in terms of Sobolev capacities can be found  in \cite{Maz}.
+
+To characterize the existence of arbitrary weak solutions $u \in L^q_{{\rm loc}} (\R^n, \sigma)$, and obtain sharp global pointwise estimates, a localization procedure
+is used in \cite{CV2} which involves the so-called intrinsic Wolff potentials.
+
+More precisely, one needs to consider a localized version of \eqref{weight-endpoint} where the measure
+$\sigma$ is replaced with $\sigma_B=\chi_B \, \sigma$ restricted to a
+ball $B=B(x, r)$, and the corresponding best constant $\varkappa$ is denoted by $\varkappa(B)$. These constants are used as building blocks in the key tool, a  potential of Th. Wolff type (see \cite{AH} for the  theory and history of Wolff's potentials),
+\begin{equation} \label{potential}
+K \sigma (x)  =  \int_0^{\infty} \frac{ \left[\varkappa(B(x, r))\right]^{\frac{q}{1-q}}}{r^{n-2}}\frac{dr}{r},  \quad x \in \R^n.
+\end{equation}
+This nonlinear potential, together with the usual Newtonian potential $N \sigma$, provides sharp bilateral estimates of solutions in the case $p=2$ and  $0<q<1$.
+
+
+
+
+
+This work has been motivated by the results of  Brezis and Kamin \cite{BK} who proved that \eqref{eq1},  with $p=2$ and $0<q<1$, has a {\it bounded} solution $u$ on $\R^n$ if and only
+if  ${\bf N} \sigma \in L^{\infty}(\R^n)$; moreover,  such a solution is unique, and there exists a constant $c>0$ so that
+\begin{equation} \label{b-k}
+c^{-1} \, \Big ( N \sigma(x) \Big)^{\frac{1}{1-q}} \le u (x) \le c \, N \sigma (x), \quad x \in \R^n.
+\end{equation}
+
+The lower bound in \eqref{b-k}, which is  generalized in \eqref{h-pos} and
+\eqref{lowerest2}, holds for all solutions. On the other hand,  the upper bound is valid only for bounded solutions. Some
+generalizations of the upper bound to possibly singular solutions
+in the form
+\[
+ u (x) \le c \, \left[ N \sigma (x) + \Big ( N \sigma(x)\Big)^{\frac{1}{1-q}}\right], \quad x \in \R^n,\]
+under additional assumptions on $\sigma$, can be found in \cite{CV3}.
+
+
+As was pointed out in  \cite{BK}, both the lower and upper estimates  in \eqref{b-k} are sharp in a sense.  However, there is a substantial gap between them. In Theorem \ref{mainthm} below
+this gap is bridged by using   $K \sigma + (N \sigma)^{\frac{1}{1-q}} $. The corresponding pointwise  estimates hold for all,  possibly singular solutions, as well
+as more general nonlinear equations.
+
+
+In the context of fractional Laplacian equations \eqref{fraclap}, we denote by  $I_{\alpha}$
+ the Riesz potential of order $ \alpha\in (0, n)$ on $\R^n$:
+$$I_{\alpha}\mu= |x|^{\alpha-n} \star \mu =  c(\alpha, n) \, (-\Delta)^{-\frac{\alpha}{2}} \mu,$$
+for $\mu \in \M$. In what follows,  the normalization
+constant $c(\alpha, n)$ will be dropped for the sake of convenience; in particular,
+$I_2 \mu=N \mu$ stands for the Newtonian potential.
+
+
+
+We now introduce  some elements of nonlinear potential theory which is intrinsic to \eqref{fraclap}. Let $B=B(x, r)=\{y \in \R^n: \, |x-y|<r\}$ be a ball in $\R^n$, and
+let   $\sigma_B=\chi_B \, \sigma$ stand for the measure $\sigma$   restricted to  $B$.
+By
+$\kappa(B)$ we denote  the least constant in the localized integral inequality
+\begin{equation} \label{Rieszineq}
+\Vert I_{\alpha} \nu \Vert_{L^q(d\sigma_{B})} \le \kappa(B) \, \nu(\R^n), \quad \forall \nu \in \M,
+\end{equation}
+where $0<q<1$ and $0<\alpha<n$.
+
+We observe
+that the constant $\kappa(B)$ does not change if we restrict ourselves to absolutely
+continuous $\nu \in L^1_{+}(\R^n)$ on the right-hand side of \eqref{Rieszineq}.
+
+
+
+
+We define the corresponding nonlinear potential of Wolff type by
+\begin{equation} \label{potential-frac}
+K_{\alpha, q} \sigma (x)  =  \int_0^{\infty} \frac{\left[ \kappa(B(x, r))\right]^{\frac{q}{1-q}}}{r^{n- \alpha}}\frac{dr}{r},  \quad x \in \R^n.
+\end{equation}
+
+
+The following condition  ensures that both $K_{\alpha, q} \sigma$ and $I_{ \alpha} \sigma$  are not identically infinite:
+\begin{equation}\label{Rieszfinite}
+ \int_1^{\infty} \frac{ \left[\kappa(B(0, r))\right]^{\frac{q}{1-q}}}{r^{n- \alpha }}\frac{dr}{r}  + \int_1^{\infty} \frac{\sigma(B(0, r))}{r^{n-  \alpha}}\frac{dr}{r} < \infty,
+\end{equation}
+
+ Clearly, the first part of  \eqref{Rieszfinite} is equivalent to $K_{\alpha, q} \sigma \not\equiv +\infty$, whereas
+ the second one is equivalent to  $I_\alpha \sigma\not\equiv +\infty$ (and  $I_\alpha \sigma< +\infty$ a.e.)
+
+
+ Note that solutions $u \in L^q_{{\rm loc}} (\R^n, d \sigma)$ to \eqref{fraclap} are understood in the weak sense.
+\begin{theorem} \label{mainthm}
+Let  $0 < q < 1$, $0<\alpha<n$, and  $\sigma \in \M$.
+
+{\rm (i)} If \eqref{Rieszfinite} holds, then  there exists a minimal  solution $u>0$ to \eqref{fraclap} such that
+\begin{equation} \label{two-sided}
+c^{-1}   \left [K_{\alpha, q}  \sigma + \left(I_\alpha \sigma\right)^{\frac{1}{1-q}}\right]
+\le u \le c  \left [K_{\alpha, q}  \sigma + \left(I_\alpha \sigma\right)^{\frac{1}{1-q}}\right],
+\end{equation}
+where $c>0$ is a constant which  depends only on  $q$, $\alpha$, and $n$.
+
+
+{\rm (ii)} Conversely, if there exists a nontrivial   (super) solution $v$ to \eqref{fraclap}, then \eqref{Rieszfinite} holds,  and $v \ge u$, where $u$ is the minimal solution of statement {\rm (i)}.
+\end{theorem}
+
+We observe that neither of the two parts of the condition  \eqref{Rieszfinite} implies the other one.
+Condition  $I_\alpha \sigma<\infty$ a.e. alone is not enough to ensure the existence of a global solution $u$ even if all
+the local embedding constants $\kappa(B)$ in \eqref{Rieszineq} are finite,  unless $\sigma$ is radially symmetric (see \cite{CV3}).
+
+
+
+  \section{Existence of solutions for sublinear integral equations}\label{existence}
+
+  	In this section,  $G \colon \Omega\times \Omega \to (0, +\infty]$ is a lower semicontinuous,  quasi-symmetric kernel on $\Omega\times \Omega$  that satisfies \eqref{quasi}
+  along with the weak maximum principle \eqref{weak-max}, on a locally compact Hausdorff space $\Omega$.
+  Let us fix a locally finite Radon measure $\sigma \in \mathcal{M}^{+}(\Omega)$.
+
+   In \cite{QV1,QV2,V}, necessary and sufficient conditions are obtained for the existence of positive (super) solutions to the sublinear integral equation
+   \begin{equation}
+			\label{sol}
+			u =  G(u^q d \sigma), \quad 0<u<+\infty \quad d \sigma-\text{a.e.}  \, \,  \text{ in $\Omega$},
+				\end{equation}
+
+  The existence of solutions in Lebesgue spaces, $u \in L^\gamma (\Omega, \sigma)$,   turned out to be related to weighted norm inequalities of the type
+  \begin{equation}\label{weight-sigma}
+\Vert G (f \, d \sigma)\Vert_{L^r(\Omega, d \sigma)} \le C \, \Vert f \Vert_{L^{s} (\Omega, d \sigma)}, \quad \forall f \in L^{s} (\Omega, d \sigma),
+\end{equation}
+for integral operators $G$  in the case $0<r<s<+\infty$, $s \ge 1$.
+
+The most important and most difficult case is when $r=q$ ($0<r<1$) and $s=1$, i.e.,
+ \begin{equation}\label{weight-sigma-1}
+\Vert G (f \, d \sigma)\Vert_{L^q(\Omega, d \sigma)} \le C \, \Vert f \Vert_{L^{1} (\Omega, d \sigma)}, \quad \forall f \in L^{1} (\Omega, d \sigma).
+\end{equation}
+
+
+
+ In the special case of Green's kernels and the corresponding elliptic operators $L$,
+ \eqref{weight-sigma-1}  boils down to a non-standard  trace inequality
+ \begin{equation}\label{weight-non}
+\Vert \phi \Vert_{L^q(\Omega, d \sigma)} \le C \, \Vert L \phi \Vert_{L^{1} (\Omega, d x)}, \quad \forall  \,
+ \phi \in C^2_0(\overline{\Omega}), \, \, \, L \phi  \ge 0.
+\end{equation}
+
+
+It will be more convenient, as it often happens in the end-point case $p=1$, to replace \eqref{weight-sigma-1}  with a similar inequality for measures
+$\nu \in \mathcal{M}^{+}(\Omega)$ in place of $L^{1} (\Omega, d \sigma)$,
+ \begin{equation}\label{weight-meas}
+\Vert G  \nu\Vert_{L^q(\Omega, d \sigma)} \le C \, \Vert \nu \Vert, \quad \forall  \nu \in \mathcal{M}^{+}(\Omega),
+\end{equation}
+where $\Vert \nu \Vert = \nu(\Omega)$.
+Clearly, \eqref{weight-meas}$\Longrightarrow$\eqref{weight-sigma-1} if we set $d \nu = |f| \, d \sigma$. The converse is also true in many instances.
+
+
+The following theorem demonstrates that a positive  solution $u \in L^q(\Omega, \sigma)$ to \eqref{sol}
+exists if and only if \eqref{weight-meas} holds. The same condition characterizes the existence of
+a positive supersolution $u\in L^q(\Omega, \sigma)$ such that
+\begin{equation}
+\label{super-sol}
+			u \ge  G(u^q \sigma), \quad 0<u<+\infty \quad d \sigma-\text{a.e.}  \, \,  \text{ in $\Omega$}.
+				\end{equation}
+
+
+
+	\begin{theorem}\label{strong-thm}
+		Let $\sigma \in \mathcal{M}^{+}(\Omega)$ and $0<q<1$.  Suppose $G$ is a  lower semicontinuous, quasi-symmetric kernel which satisfies the weak maximum principle.
+		Then the following statements are equivalent:
+		\begin{enumerate}
+			\item There exists a positive constant $C=C(\sigma, G)$ such that \eqref{weight-meas} holds.
+			\item There exists a supersolution $u \in L^q(\Omega, d \sigma)$ such that \eqref{super-sol}  holds.
+			\item There exists a solution $u\in L^q(\Omega, d \sigma)$ to \eqref{sol}.
+		\end{enumerate}
+	\end{theorem}
+	
+	This theorem is proved in \cite{QV2} for more general \textit{non-negative} kernels under the additional
+	\textit{non-degeneracy} assumption on the kernel $G$, which is in fact necessary for the existence of
+	a positive solution. Non-degeneracy of $G$ is not needed for the existence of a non-trivial positive super-solution.
+
+
+The next theorem gives some necessary and also close sufficient conditions for  \eqref{weight-meas} to hold.
+	
+	\begin{theorem}
+		\label{energy_norm_results}
+		Let $\sigma \in \mathcal{M}^{+}(\Omega)$, and $0<q<1$.  Suppose $G$ is a quasi-symmetric, non-degenerate kernel which satisfies the weak maximum principle.
+		\begin{enumerate}
+			\item If   \eqref{weight-meas} holds, then ${G}\sigma \in L^{\frac{q}{1-q}}(\Omega, \sigma)$.
+			\item If ${G}\sigma \in L^{\frac{q}{1-q}, 1}(\Omega, \sigma)$, then  \eqref{weight-meas} holds.
+		\end{enumerate}
+	\end{theorem}
+	Here $L^{s, 1}(\Omega, \sigma)$ is the corresponding Lorentz space (see \cite{SW}).
+	
+	
+	It is shown in \cite{QV2} that, without
+	the assumption that $G$ satisfies the weak maximum principle, the condition
+	\begin{equation}	
+	\label{energy-s}
+	 \int_{\Omega}  ({G}\sigma)^s  d \sigma < \infty
+	\end{equation}
+	with $s=\frac{q}{1-q}$ is necessary for the existence of a (super)solution $u \in L^q(\Omega, \sigma)$ to \eqref{sol}  only if $q\in (0, q_0]$, where
+	 \[q_0 = \frac{\sqrt{5}-1}{2}=0.61\ldots\]
+	 denotes the conjugate golden ratio.  For general measures $\sigma$,
+	the existence of a positive  solution $u \in L^q(\Omega, \sigma)$ does not guarantee that
+	\eqref{energy-s} holds if  $q \in (q_0, 1)$, or $s \not=\frac{q}{1-q}$ for all $q\in(0, 1)$, even for symmetric positive kernels $G$.
+	
+	
+	Another characterization of the strong type inequality \eqref{weight-meas} can be deduced from Maurey's results \cite{M}: it  is  equivalent to the existence of a nonnegative function $F \in L^1(\Omega, \sigma)$ which satisfies
+		\[ \sup_{y \in \Omega} \int_\Omega  G(x,y) \, F(x)^{1-\frac{1}{q}} \, d\sigma(x) < +\infty. \]
+		This is a dual reformulation of  \eqref{weight-meas}, which does not
+		require $G$ to satisfy the weak maximum principle. In the discrete case where $\Omega$ consists
+		of a finite number of points, it represents the duality of the two basic concave programming problems
+		(see \cite[Sec. 5.7]{BG}).
+		
+			
+	
+
+	
+	 We also give in \cite{QV1,QV2,V} explicit characterizations of  the weak type $(1, q)$-inequality
+		\begin{equation}
+			\label{main_weak_inequality}
+			\Vert {G}\nu \Vert_{L^{q,\infty} (\Omega, d\sigma)} \le C \Vert \nu \Vert, \quad \text{ for all } \nu \in \mathcal{M}^+(\Omega),
+		\end{equation}
+	for any $q>0$, in terms of energy estimates, as well as capacities.
+		
+
+	
+	In \cite{QV2}, we demonstrate how to remove the extra assumption imposed in
+	Theorem~\ref{strong-thm}
+	that a (super)solution $u \in L^q(\Omega,  \sigma)$ globally. We prove
+	the following theorem where we only assume that $u \in L^q_{{\rm loc}} (\sigma)$, or equivalently,
+	$0<u<+\infty$ $d \sigma$-a.e., provided the kernel $G$ satisfies a weak  form of the \textit{complete
+	maximum principle}, or alternatively if $G$ is a quasi-metric kernel (see, e.g.,  \cite{H,FNV,QV2}).
+	
+	The weak form (with constant $\mathfrak{b} \ge 1$) of the complete comparison principle, also called the \textit{domination principle}, says the following:
+	\[{G}\mu(x) \le v(x)\, \,   \text{on} \, \, {\rm supp} \, (\mu),  \, \, {G}\mu < + \infty \, \, d \mu-\text{a.e.} \Longrightarrow {G} \mu(x) \le \mathfrak{b} \, v(x) \, \,  \text{on}  \, \, \Omega,
+	\] for any positive measure $\mu$ and positive superharmonic function $v$.
+	
+	
+	
+
+		With a special function $m$ satisfying $0 < m < +\infty$ $d\sigma$-a.e., known as a \textit{modifier} \cite{H,FNV}, we can modify the kernel $G$, so that the modified kernel
+		\begin{equation}
+		\label{mod-ker}
+		K(x, y) = \frac{G(x, y)}{m(x) \, m(y)}, \quad x, y \in \Omega,
+		\end{equation}
+		satisfies the weak maximum principle \eqref{weak-max}. This makes it possible to apply Theorem~\ref{strong-thm}
+		with $K$ in place of $G$, and consider $u \in L^q_{{\rm loc}} (\Omega, \sigma)$. A typical modifier
+		that works for general  kernels $G$ which satisfy the complete
+	maximum principle is given by
+	\begin{equation}
+		\label{typ-mod}
+m(x) = \min \{1, G(x, x_0)\}, \quad x \in \Omega,
+	\end{equation}
+	where $x_0$ is a fixed pole in $\Omega$ \cite{HN}.
+
+	
+		We say that $G$ is a \textit{quasimetric} kernel with quasimetric constant $\kappa>0$ provided $G$ is symmetric and $d(x,y)\,:=\,\frac{1}{G(x,y)}$ satisfies the quasimetric triangle inequality with quasimetric constant $\kappa$, i.e.,
+		\begin{equation}\label{quasitr}
+			d(x,y) \le \kappa [d(x,z) + d(z, y)],
+		\end{equation}
+		for any $x, y, z \in \Omega$. Here  $d(x,y)\colon \,  \Omega \times \Omega \rightarrow [0, + \infty)$.
+	
+	The kernel $G$ is \textit{quasimetrically modifiable} with constant $\kappa$ if there exists a modifier  $m$  such that
+		\begin{equation}
+			K(x,y) = \frac{G(x,y)}{m(x)m(y)}
+		\end{equation}
+		is a quasimetric kernel with quasimetric constant $\kappa$.
+
+
+	
+	\begin{theorem}
+		\label{local_solutions-Intro}
+		Let $\sigma \in \mplus{\Omega}$ and $0 < q < 1$.
+		Suppose $G$ is a quasi-symmetric positive kernel, continuous in the extended sense on $\Omega\times\Omega$, which either (a) satisfies the complete maximum principle, or (b) is quasi-metrically modifiable. Then the following statements are equivalent:
+		\begin{enumerate}
+			\item There exists a positive constant $C$ such that the weighted norm inequality
+			\begin{equation}
+		\label{weight-G}
+		\Vert G \nu \Vert_{L^q(m \, d\sigma)} \le C \,  \int_\Omega m \, d\nu, \quad \text{for all } \nu \in \mplus{\Omega},
+	\end{equation}
+			holds, where the modifier $m(x)$ is given by \eqref{typ-mod} for some $x_0\in \Omega$. \medskip
+			
+			\item There exists a positive (super) solution $u$   to \eqref{sol} such that $u \in L^q_{\rm loc}(\Omega, \sigma)$ (or equivalently $0<u<+\infty$ $d\sigma$-a.e.)
+		\end{enumerate}
+		\end{theorem}
+
+	
+	Theorem~\ref{local_solutions-Intro} yields a characterization of the existence of weak solutions
+	$u \in L^q_{\rm loc}(\Omega, \sigma)$
+	to  the fractional Laplacian equation \eqref{frac_lap_eqn} in general domains $\Omega$ with positive Green's function $G$ for $0<\alpha\le 2$, or the entire space $\R^n$, or balls, or half-spaces in $\R^n$, for $0<\alpha<n$ (quasi-metric kernels $G$)
+	as discussed in the introduction.  In the classical case $\alpha=2$,
+	 such solutions are the so-called very weak solutions for bounded $C^2$-domains $\Omega$ (see, e.g., \cite{MV}).
+	
+	 In the case $\Omega=\R^n$, an alternative criterion for the existence of weak solutions
+	$u \in L^q_{\rm loc}(\R^n, \sigma)$
+	to  the fractional Laplacian equation \eqref{fraclap} based on localization of \eqref{weight-meas}
+	is discussed in Sec. \ref{upper} above.
+
+
+	
+  \section{Higher integrability of solutions}\label{higher}
+	
+	Under the assumptions on the kernel $G$ imposed at the beginning of Sec.~\ref{existence},
+	let us consider conditions on $\sigma$ which ensure the existence of solutions
+	$u \in L^{r}(\Omega, \sigma)$ with $r>0$ to the sublinear integral equation \eqref{sol}. In this case,  a simple necessary
+	and sufficient condition in terms of the energy \eqref{energy-s} was obtained in \cite{V}. In particular, these results were used in \cite{QV3}
+	to establish conditions for the existence of  solutions $u \in L^r(\Omega, dx)$
+	(now with respect to Lebesgue measure) to the fractional Laplacian equation \eqref{frac_lap_eqn} in a general domain $\Omega$ with positive Green's function $G$, and also $W^{1, p} (\Omega)$ solutions to
+	divergence form sublinear elliptic equations \eqref{f=0}. These results are discussed in Sec.~\ref{Lpsolutions}
+	below.
+	
+	The following theorem (see \cite{V}) characterizes  the existence of solutions $u \in L^{r}(\Omega, \sigma)$ for $r>q$, along with related weighted norm inequalities
+	\begin{equation}\label{strong-type}
+		\Vert {G} (f d\sigma) \Vert_{L^r(\Omega, \sigma)} \le C \, \Vert f \Vert_{L^p(\Omega, \sigma)},
+		\quad \forall f \in L^p(\Omega, \sigma).
+	\end{equation}
+
+	
+	
+	\begin{theorem}\label{thm-a}
+		Let $\sigma \in \mathcal{M}^{+}(\Omega)$.
+		 Suppose $G$ is a positive, lower semicontinuous, quasi-symmetric kernel on $\Omega$ which satisfies the weak maximum principle.
+		
+		
+		(i) If  $\, 1<p<+\infty$ and $0<r<p$, then  \eqref{strong-type} holds if and only if
+					\begin{equation}\label{r-p}
+\int_\Omega ({G} \sigma)^{\frac{pr}{p-r}} d \sigma<+\infty.
+\end{equation}
+		
+		
+		(ii) If  $\, 0<q<1$ and $q<r < \infty$,  then there exists a positive (super) solution $u\in L^r(\Omega, d \sigma)$ to \eqref{sol} if and only if \eqref{strong-type} holds with $p=\frac{r}{q}$, or equivalently
+		by statement~(i),
+		\begin{equation}\label{r-q-2}
+\int_\Omega ({G} \sigma)^{\frac{r}{1-q}} d \sigma<+\infty.
+\end{equation}
+		\end{theorem}
+	
+	\begin{remark}\label{rm1} {\rm We observe that the ``if'' parts of statements (i) and (ii) of Theorem~\ref{thm-a}
+	 fail if $p=1$, and $r=q$, respectively. 	The ``only if'' parts hold for all $0<r<p$ in statement (i),
+	 and $r>0$ in statement (ii).}
+	    \end{remark}
+	
+	    \begin{remark}\label{rm2}
+	    {\rm It is known that inequality \eqref{strong-type} with $p=\frac{r}{q}\ge 1$ in the case $0<q<1$ yields the existence of a positive (super) solution $u\in L^r(\Omega, \sigma)$ for \eqref{sol}. This statement  follows from a  lemma due to Gagliardo \cite{G}, and does not require $G$ to be quasi-symmetric or to satisfy the weak maximum principle. However, the converse statement fails without the weak maximum principle  (see  \cite{QV2} in the case $r=q$).}
+	    \end{remark}
+	
+	 	\begin{remark}\label{rm3}  {\rm Without the assumption that $G$ satisfies the weak maximum principle,
+	 the ``only if'' parts of statement (i) (with $p=\frac{r}{q}\ge 1$) and
+	statement   (ii) (with $r \ge q$) of Theorem \ref{thm-a} hold only for $0<r \le 1-q^2$; see \cite{V}.
+	The case $r=q$ when $0<q<q_0=\frac{\sqrt{5}-1}{2}$  is discussed above.}
+	 \end{remark}
+	 	
+
+
+
+  \section{Positive solutions in {\boldmath$W^{1, p}(\Omega)$} and {\boldmath$L^r(\Omega)$}}\label{Lpsolutions}
+
+  	
+		
+	
+	In this section, we present sharp conditions on the coefficient $\sigma$ which ensure the existence a positive weak solution $u \in W^{1, p}(\Omega)$ or  $u \in L^r(\Omega, \sigma)$   to  the sublinear elliptic
+	Dirichlet problem
+		\begin{equation}
+			\label{lap_eqn}
+		 \begin{cases}
+			 -\text{div}  (\mathcal{A} \nabla u ) = \sigma u^q, &u>0 \, \text{ in } \Omega, \\
+			u = 0 & \text{ on } \partial \Omega,
+		\end{cases}
+		\end{equation}
+	where $0 < q < 1$, and $\sigma$ is a locally integrable function, or measure, in a domain $\Omega \subseteq \R^n$ with nonnegative Green's function $G$ associated with the uniformly elliptic operator $-\text{div}  (\mathcal{A} \nabla \cdot )$, for a symmetric matrix $\mathcal{A}\in L^\infty(\Omega)^{n\times n}$.  Some of these results obtained in \cite{QV3} hold for  analogous fractional Laplacian equations \eqref{frac_lap_eqn} in domains $\Omega$ with positive Green's function.
+
+	
+	
+	
+	More generally,
+	for a lower semicontinuous kernel
+	$G\colon \Omega\times \Omega\to (0, +\infty]$,  where $\Omega \subseteq \R^n$, we denote by
+	$$G (f \, d \sigma)(x) =\int_{\Omega} G(x, y) \, f(y) \, d \sigma(y), \quad x \in \Omega, $$
+	 the corresponding integral operator, where  $\sigma \in \mathcal{M}^+(\Omega)$, the class of
+	 positive locally finite Borel measures in $\Omega$.
+	
+	
+	
+		
+	We study positive solutions $u \in L^r(\Omega, d\sigma)$, as well as $u \in L^r(\Omega, dx)$, for the integral equation
+			\begin{equation}	\label{int_eqn}
+			u = G(u^q d \sigma), \quad 0<u<+\infty \quad d \sigma-\text{a.e.}  \, \,  \text{ in $\Omega$},
+				\end{equation}
+				where $0<q<1$.
+				If $G$ is Green's kernel associated with the Laplacian in a domain
+	$\Omega \subseteq \mathbb{R}^n$, then \eqref{int_eqn}
+	 is equivalent to  the sublinear elliptic boundary value problem    \eqref{lap_eqn} (see \cite{QV2}).
+				
+				
+	As above, we assume that the kernel $G$ of the integral operator $G$ is lower semicontinuous, quasi-symmetric, and  satisfies a weak maximum principle. 	 In Theorem \ref{thm2}  below an additional assumption is imposed on $G$,
+		\begin{equation}\label{riesz-i}
+G(x, y) \le \frac{C}{|x-y|^{n-\alpha}}, \quad x, y \in \Omega,
+\end{equation}
+for $0<\alpha<n$; here $C$ is a positive constant which does not depend on $x, y$.
+	
+Such restrictions are satisfied by the Green kernel associated with many elliptic operators, including the fractional Laplacian
+	$(- \Delta)^{\frac{\alpha}{2}}$ and $\mathcal{A}$-Laplacian (with $\alpha=2$) in a domain $\Omega\subseteq \R^n$.
+		
+		The following theorems and corollaries are proved in \cite{QV3}.
+			 		
+				
+\begin{theorem}\label{thm1}
+		Let $\sigma \in \mathcal{M}^{+}(\Omega)$, where $\Omega \subseteq \R^n$ ($n \ge 1$) is a domain with a positive Green's function $G$ associated with  $-{\rm div}  (\mathcal{A} \nabla \cdot )$. Let $0<q<1$ and $\gamma>0$. Then there exists a positive solution $u$ to  \eqref{lap_eqn} such that
+		\begin{equation}\label{gamma}
+		\int_\Omega \vert \nabla u \vert^2 u^{\gamma-1} \, dx < \infty
+	\end{equation}
+	if and only if
+		\begin{equation}\label{r-q}
+\int_\Omega (G \sigma)^{\frac{\gamma+q}{1-q}} d \sigma<+\infty.
+\end{equation}
+
+In particular, in the case $\gamma=1$, the condition
+\begin{equation}\label{fin-energy}
+\int_\Omega (G \sigma)^{\frac{1+q}{1-q}} d \sigma<+\infty
+\end{equation}
+is necessary and sufficient for the existence of  a positive solution $u\in W^{1, 2}_0(\Omega)$ to
+ \eqref{lap_eqn}.
+		\end{theorem}
+		
+	Theorem \ref{thm1} yields sufficient conditions for $u \in W^{1, p}_0(\Omega)$ when $\frac{n}{n-1} <p<2$.  Here $W^{1, p}_0(\Omega)$ stands for
+		the homogeneous Sobolev space defined as the closure of $C^\infty_0(\Omega)$ functions in the norm
+		\[
+	\Vert u\Vert_{W^{1, p}(\Omega)}=\Big (\int_\Omega |\nabla u|^p dx\Big)^{\frac{1}{p}}.
+	\]
+Letting $p=\frac{n(1+\gamma)}{n-1+\gamma}$ with $0<\gamma <1$ in
+Theorem \ref{thm1}, we obtain the following corollary.
+		
+		
+		\begin{cor}\label{cor1}  Under the assumptions of Theorem \ref{thm1}, suppose that $\frac{n}{n-1} <p<2$ and $n \ge 3$. If
+		\begin{equation}\label{r-q-cor1}
+\int_\Omega (G \sigma)^{\frac{p(n-2)}{(1-q)(n-p)}-1} d \sigma<+\infty,
+\end{equation}
+then there exists a positive solution $u \in W^{1, p}_0(\Omega)$ to  \eqref{lap_eqn}.
+		\end{cor}
+		
+		
+\begin{cor}\label{cor2}  Under the assumptions of Theorem \ref{thm1}, suppose  $\sigma \in L^s (\Omega)$, where $\frac{n}{n-q(n-2)}<s\le \frac{2n}{n+2-q(n-2)}$. Then there exists a positive solution $u \in
+  W^{1, p}_0(\Omega)  \cap L^r(\Omega)$ to \eqref{lap_eqn} with $p=\frac{n(1-q)s}{n-s(1+q)}$
+and $r=\frac{n(1-q)s}{n-2s}$.
+		\end{cor}
+				
+		
+		In the following theorem we give conditions for the existence of positive
+		solutions $u \in L^r(\Omega, dx)$ for more general kernels $G$.
+		
+\begin{theorem}\label{thm2}  Let $\Omega \subseteq \R^n$ ($n \ge 1$), and $\sigma \in \mathcal{M}^{+}(\Omega)$. Let $0<q<1$.  Suppose $G$ is a positive, lower semicontinuous kernel on $\Omega \times \Omega$ which is quasi-symmetric and satisfies the weak maximum principle.
+
+
+
+		
+		
+		(i) If  there exists a solution $u \in L^r(\Omega, dx)$, $r>0$, to \eqref{int_eqn}, then
+		\begin{equation}\label{r-q-dx}
+\int_\Omega (G \sigma)^{\frac{r}{1-q}} d x<+\infty.
+\end{equation}
+
+(ii) Suppose additionally that $G$ satisfies condition  \eqref{riesz-i}  for some  $0<\alpha<n$.
+If  $\frac{n}{n-\alpha}<r<\infty$ and
+	\begin{equation}\label{r-q-ds}
+\int_\Omega (G \sigma)^{\frac{r(n-\alpha)}{(1-q)n}-1} d \sigma<+\infty,
+\end{equation}
+then there exists a positive solution $u \in L^r(\Omega, dx)$ to \eqref{int_eqn}.
+		\end{theorem}
+
+
+
+\begin{cor}\label{cor3}  Under the assumptions of Theorem \ref{thm2}, suppose that
+$\sigma \in L^s (\Omega, dx)$, where $\frac{n}{n -q(n-\alpha)}<s<\frac{n}{\alpha}$. Then there exists a positive solution $u \in L^r(\Omega, dx)$ to \eqref{int_eqn}, where  $r=\frac{n(1-q)s}{n-\alpha s}$.
+		\end{cor}
+		
+
+
+		
+		Corollaries \ref{cor2} and \ref{cor3} for bounded domains $\Omega$ 	were obtained earlier by Boccardo and Orsina \cite{BO}. We observe that the restrictions on $s$ in these corollaries, and consequently on the exponents $\gamma$, $p$ and $r$
+	in 	Theorem \ref{thm1}, Theorem \ref{thm2}, and Corollary \ref{cor1}, are sharp.
+	
+	
+	
+	
+	There are also weak-type
+	analogues of these results for Marcinkiewicz spaces
+	$L^{r, \infty}$ as in \cite{BO2}, based on the corresponding weak-type weighted norm inequalities (see  \cite{QV1,QV2,V}).
+		
+		The proof of Theorem \ref{thm1} in \cite{QV3}
+makes use of   the weighted norm inequality
+		\begin{equation}\label{weight-1}
+\Vert G (f \, d \sigma)\Vert_{L^r(\Omega, d \sigma)} \le C \, \Vert f \Vert_{L^{s} (\Omega, d \sigma)}, \quad \forall f \in L^{s} (\Omega, d \sigma),
+\end{equation}
+for integral operators $G$  in the case $1<r<s<+\infty$ considered in Sec. \ref{upper}.
+		
+The proof of Theorem \ref{thm2}
+ uses  both \eqref{weight-1} and
+a similar weighted norm inequality with Lebesgue measure on the left-hand side,
+\begin{equation}\label{weight-2}
+\Vert G (f \, d \sigma)\Vert_{L^r(\Omega, dx)} \le C \, \Vert f \Vert_{L^{s} (\Omega, d \sigma)}, \quad \forall f \in L^{s} (\Omega, d \sigma),
+\end{equation}
+ for $1<r<\infty$, $1<s<+\infty$.  Such inequalities in the equivalent dual form
+ \begin{equation}\label{weight-dual}
+\Vert G f \Vert_{L^{s'}(\Omega, d\sigma)} \le C \, \Vert f \Vert_{L^{r'} (\Omega, d x)}, \quad \forall f \in L^{r'} (\Omega, d x),
+\end{equation}
+were characterized  in the special case where
+$\Omega=\R^n$ and $G=(-\Delta)^{-\frac{\alpha}{2}}$ is the Riesz potential of order $\alpha\in (0, n)$, by  Maz'ya for $r \ge s\ge 1$, and Maz'ya and Netrusov for $1<r < s$,  in terms of Sobolev capacities, and
+later by Cascante, Ortega and the author in terms of Wolff potentials (see \cite{Maz,COV}).
+
+In \cite{QV3}, we employ an
+alternative characterization in terms of Green's potentials $G \sigma$ as in Theorem \ref{thm-a} above, which is sufficient for both
+\eqref{weight-1} and \eqref{weight-2}  simultaneously.
+
+\vspace*{5mm}
+
+\selectlanguage{russian}
+\begin{engbibliography}{25}
+
+  \bibitem{AH}
+  \baut{Adams}{D.~R.} \baut{Hedberg}{L.~I.} \btit{Function Spaces and Potential Theory}
+\bcity{Berlin; Heidelberg; New York} \bpub{Springer-Verlag} \byr{1996}\bpp{368}
+\mkbooke
+
+\bibitem{An}
+\baut{Ancona}{A.} \btit{Some results and examples about the behaviour of harmonic functions and Green's functions with
+respect to second order elliptic operators} \bj{Nagoya Math. J.} \bvol{165} \byr{2002} \bpp{123--158}
+\mkpapere
+
+
+  \bibitem{BG}
+  \baut{Berge}{C.} \baut{Ghouila-Houri}{A.} \btit{Programming, Games and Transportation Networks} \bpub{Methuen}\bcity{London} \byr{1965} \bpp{248}
+  \mkbooke
+
+
+\bibitem{BO} \baut{Boccardo}{L.} \baut{Orsina}{L.} \btit{Sublinear elliptic equations in $L^s$} \bj{Houston Math. J.} \bvol{20} \byr{1994} \bpp{99--114}
+\mkpapere
+
+
+\bibitem{BO2}
+\baut{Boccardo}{L.} \baut{Orsina}{L.} \btit{Sublinear elliptic equations with singular potentials} \bj{Adv. Nonlin. Studies} \bvol{12} \byr{2012} \bpp{187--198}
+\mkpapere
+
+
+
+
+\bibitem{BK} \baut{Brezis}{H.} \baut{Kamin}{S.}  \btit{Sublinear elliptic equation on $\mathbb{R}^n$} \bj{Manuscr. Math.} \bvol{74} \byr{1992}\bpp{87--106}
+\mkpapere
+
+
+\bibitem{COV} \baut{Cascante}{C.} \baut{Ortega}{J.~M.} \baut{Verbitsky}{I.~E.} \btit{On {$L\sp p$}-{$L\sp q$} trace inequalities} \bj{J. London Math. Soc.}  \bvol{74} \byr{(2006)} \bpp{497--511}
+    \mkpapere
+
+
+
+
+  \bibitem{CV2} \baut{Cao}{D. T.} \baut{Verbitsky}{I. E.} \btit{Nonlinear elliptic equations and intrinsic potentials of Wolff type}
+\bj{J. Funct. Analysis} \bvol{272} \byr{2017} \bpp{112--165} \bdoi{http://dx.doi.org/10.1016/j.jfa.2016.10.010}
+\mkpapere
+
+
+\bibitem{CV3} \baut{Cao}{D. T.} \baut{Verbitsky}{I. E.} \btit{Pointwise estimates of Brezis--Kamin type for solutions of sublinear elliptic equations}  \bj{Nonlin. Analysis Ser. A: Theory, Methods \& Appl.} \bvol{146} \byr{2016}\bpp{1--19}
+    \mkpapere
+
+\bibitem{CV1}
+\baut{Dat}{C.~T.} \baut{Verbitsky}{I.~E.} \btit{Finite energy solutions of
+  quasilinear elliptic equations with sub-natural growth terms} \bj{Calc. Var.
+  PDE} \bvol{52} \byr{2015} \bpp{529--546}
+  \mkpapere
+
+\bibitem{FNV}
+\baut{Frazier}{M.} \baut{Nazarov}{F.} \baut{Verbitsky}{I.} \btit{Global estimates for
+  kernels of Neumann series and Green's functions} \bj{J. London Math. Soc.} \bvol{90}   \byr{2014}  \bpp{903--918}
+  \mkpapere
+
+\bibitem{F}
+\baut{Fuglede}{B.} \btit{On the theory of potentials in locally compact spaces}
+  \bj{Acta Math.} \bvol{103} \byr{1960} \bpp{139--215}
+  \mkpapere
+
+\bibitem{G1} \baut{Grigor'yan}{A.} \btit{Heat Kernel and Analysis on
+Manifolds}\bpub{AMS}\bcity{Boston} \byr{2009}\bpp{482}
+ \mkbooke
+
+  \bibitem{G} \baut{Grigor'yan}{A.} \btit{Heat kernels on weighted manifolds
+and applications} \bj{Contemp. Math.} \bvol{398} \byr{2006}\bpp{93--191}
+\mkpapere
+
+
+
+\bibitem{GH} \baut{Grigor'yan}{A.} \baut{Hansen}{W.} \btit{Lower estimates for
+a perturbed Green function} \bj{J. Anal. Math.} \bvol{104} \byr{2008}\bpp{25--58}
+\mkpapere
+
+\bibitem{GV2}  Grigor'yan A., Verbitsky I.E. {\itshape Pointwise estimates of solutions to nonlinear equations for nonlocal operators}, preprint, 2017.
+
+   \bibitem{GV1}  \baut{Grigor'yan}{A.} \baut{Verbitsky}{I. E.} \btit{Pointwise estimates of solutions to
+semilinear elliptic equations and inequalities} \bj{J. d'Analyse Math. (to appear)} \burl{https://arxiv.org/abs/1511.03188}
+\mkwebe
+
+
+ \bibitem{H}
+\baut{Hansen}{W.} \btit{Uniform boundary Harnack principle and generalized
+  triangle property} \bj{J.~Funct. Analysis} \bvol{226} \byr{2005} \bpp{452--484}
+  \mkpapere
+
+
+\bibitem{HN} \baut{Hansen}{W.} \baut{Netuka}{I.} \btit{On the Picard principle for ${\Delta} + \mu$} \bj{Math. Z.} \bvol{270} \byr{2012} \bpp{783--807}
+\mkpapere
+
+
+  \bibitem{MV} \baut{Marcus}{M.} \baut{V\'eron}{L.} \btit{Nonlinear Second Order Elliptic Equations Involving Measures} \bpub{Walter de Gruyter} \bcity{Berlin; Boston} \byr{2014}\bpp{248}
+  \mkbooke
+
+\bibitem{M}\baut{Maurey}{B.} \btit{Th\'eor\`emes de factorisation pour les op\'erateurs lin\'eaires \`a valeurs dans les espaces {$L\sp{p}$}} \byr{1974}  \bpub{Soc. Math. France} \bcity{Paris}\bpp{384}
+    \mkbooke
+
+  \bibitem{Maz} \baut{Maz'ya}{V.} \btit{Sobolev Spaces, with Applications to Elliptic Partial Differential Equations} \bpub{Springer} \bcity{Berlin} \byr{2011}\bpp{866}
+  \mkbooke
+
+  \bibitem{QV2}
+\baut{Quinn}{S.} \baut{Verbitsky}{I.~E.} \btit{A sublinear version of Schur's lemma and elliptic PDE, preprint} \burl{https://arxiv.org/abs/1702.02682}
+\mkwebe
+
+ \bibitem{QV3}
+Quinn S., Verbitsky I.E. {\itshape Solutions to sublinear elliptic equations  in $W^{1, p}(\Omega)$  and $L^r(\Omega)$ spaces}, preprint, 2017.
+
+
+\bibitem{QV1}
+\baut{Quinn}{S.} \baut{Verbitsky}{I.~E.} \btit{Weighted norm inequalities of
+  $(1,q)$-type for integral and fractional maximal operators}  \bj{Harmonic Analysis, Partial Differential Equations
+and Applications, in Honor of Richard L. Wheeden, Ser. Applied and Numerical Harmonic Analysis} \bpub{Birkh\"auser}\bcity{Basel} \byr{2017} \bpp{217--238}
+\mkproce
+
+
+\bibitem{SW} \baut{Stein}{E.} \baut{Weiss}{G.} \btit{Introduction to Fourier Analysis on Euclidean Spaces} \bpub{Princeton Univ. Press} \bcity{Princeton, N.J.} \byr{1971}\bpp{297}
+\mkbooke
+
+
+  \bibitem{V}
+Verbitsky I.E. {\itshape Sublinear equations and Schur's test
+for integral operators}, 50 Years with Hardy Spaces, a Tribute to Victor Havin, Ser. Operator Theory: Adv. Appl., vol. 261, Basel, Birkh\"{a}user, 2017 (to appear).
+
+\end{engbibliography}
+
+\pagebreak
+
+\begin{summary} \!\!В работе представлен обзор последних результатов о поло\-жительных решениях эллиптических уравнений типа
+$-Lu+ V \,  u^{q}=f$, где $L$~--- эллиптический оператор в дивергентной форме, $0<q<1$, $f\geq 0$ и $V$~--- функция, которая может изменять знак, в области $\Omega \subseteq \mathbb{R}^{n}$ или на весовом римановом многообразии с положительной функцией Грина $G$. Обсуждаются вопросы существования решений, глобальные нижние и верхние поточечные оценки классических и слабых решений $u$, а также условия, обеспечивающие
+$u \in L^r(\Omega)$ или $u \in W^{1, p} (\Omega)$.
+
+Некоторые из этих результатов применимы к однородным сублинейным интегральным уравнениям $ u = G(u^q d \sigma)$  in $\Omega,$
+	где $0<q<1$, а $\sigma=-V$ --- положительная локально конечная борелевская мера в $\Omega$. Здесь ${G} (f \, d \sigma)(x) =\int_\Omega G(x, y), \, f(y) \, d \sigma(y)$ --- интегральный оператор с положительным (квази) симметричным ядром $G$ на $\Omega \times \Omega$, который удовлетворяет слабому принципу максимума. Результаты распространяются на положительные, возможно сингулярные, решения сублинейных уравнений, содержащих дробный лапласиан
+		\[ (-\Delta)^{\frac{\alpha}{2}} u = \sigma \, u^q, \quad u \ge 0  \quad \text{в} \, \, \Omega, \]
+	где  $0<q<1$, $0 < \alpha < n$ и $u=0$ в $\Omega^c$ и на бесконечности в областях  $\Omega \subseteq \R^n$ с положительной функцией Грина $G$.
+\end{summary}
+
+
+%\end{document}
+
+

@@ -1,0 +1,891 @@
+%\documentclass[a4paper,11pt,twoside]{article}
+%\usepackage{vvmph2}
+%\usepackage{rumathbr}
+%\usepackage{datetime}
+%\usepackage{amscd}
+%%
+%\usepackage{amsfonts,amsmath,amssymb,euscript}
+
+
+
+\def\const{\mathrm{const}}
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\esssup{\mathop{\mathrm{ess\, sup}}}
+\def\essinf{\mathop{\mathrm{ess\, i\part{title}nf}}}
+\def\mes{\mathop{\mathrm{mes}}}
+\def\FF{\mathbf{\EuScript{F}}}
+\def\dilat{\mathrm{Q}}
+
+%\begin{document}
+\udk{514.752.44+514.772}
+\bbk{(В)22.161.5}
+
+
+\art{Об уравнениях Бельтрами \plb с разнотипным вырождением на дуге}{On Beltrami equations \plb with a different-type degeneracy on an arc}
+
+\fio{Кондрашов}{Александр}{Николаевич}
+\sdeg{Кандидат физико-математических наук}{Candidate of Physical and Mathematical Sciences}
+\pos{доцент кафедры компьютерных наук\\ и экспериментальной математики}{Associate Professor,\\ Department of Computer Sciences and Experimental Mathematics}
+\emp{Волгоградский государственный университет}{Volgograd State University}
+\email{ankondr@mail.ru, alexander.kondrashov@volsu.ru, kiem@volsu.ru}
+\addr{просп. Университетский, 100, 400062 г. Волгоград, Российская Федерация}{Prosp. Universitetsky, 100, 400062 Volgograd, Russian Federation}
+
+\maketitle
+
+
+
+
+
+
+\begin{abstract} \
+Пусть $D\subset\CC$ --- односвязная область, разделенная  жордановой дугой $E\subset D$ на две подобласти $D_1$ и $D_2$, и в этой
+области задано уравнение Бельтрами, возможно, переменного типа, вырождающееся вдоль $E$.
+В работе~\cite{KondrSibMat} были описаны два принципиально различных случая вырождения уравнения Бельтрами, при котором ассоциированное с ним классическое уравнение Бельтрами допускает единственное, с точностью до суперпозиции с конформным отображением, гомеоморфное
+решение. В настоящей работе доказывается, что  справедлив
+<<двусторонний>> аналог вышеупомянутых результатов работы~\cite{KondrSibMat}, допускающий, чтобы характер вырождения по разные стороны $E$ был различным\footnote{Иначе говоря, в $D_1$ и $D_2$.}.
+\end{abstract}
+
+\keywords{вырождающееся уравнение Бельтрами, комплексная дилатация, характеристики Лаврентьева, решение с особенностью, ассоциированное уравнение}{degenerate Beltrami equation, alternating Beltrami equation, Lavrent'evs characteristics, solution with singularity, associated equation}
+
+
+\section*{Введение}
+
+ Пусть в односвязной области
+$D\subset\CC$ задано дифференциальное уравнение ---
+\emph{уравнение Бельтрами}~(см.:~\cite[гл. 2]{KondrVekua})
+\begin{equation}
+\label{KondrBeltrami1}
+f_{\overline{z}}(z)=\mu(z)f_{z}(z), \ \ (z=x_1+i x_2\in D),
+\end{equation}
+где $\mu(z)$ ($|\mu(z)|\ne1$ п.в. в $D$) --- п.в. конечная измеримая  комплекснозначная  функция.
+
+Хорошо известно~(см.:~\cite[гл. 2]{KondrVekua}), что если
+  во всякой подобласти  $D'\Subset D$ выполнено условие
+$\esssup\nolimits_{D'}|\mu(z)|<1$, то существует гомеоморфное решение $w=f (z)\in W^{1,2}_{\mathrm{loc}}(D)$, причем  $z=f^{-1} (w)\in W^{1,2}_{\mathrm{loc}}(f(D))$.
+Это решение единственно с точностью до суперпозиции с конформным  отображением  в плоскости $w$.
+
+В дальнейшем  \emph{решением} уравнения (\ref{KondrBeltrami1}) будем называть непрерывную функцию $f(z)\in W^{1,2}_{\mathrm{loc}}(D)$,
+удовлетворяющую ему п.в. в $D$.
+
+Напомним \cite[c.~7]{KondrBel}, что коэффициент $\mu(z)=f_{\overline{z}}(z)/f_{z}(z)$ называется
+\emph{комплексной дилатацией} отображения~$f(z)\in W^{1,2}_{\mathrm{loc}}(D)$;
+его задание эквивалентно заданию п.в. в $D$ поля распределения характеристик
+Лаврентьева $(p(z),\theta(z))$ (см.~\cite{KondrLavr}).
+ Отображение $w=f(z)$, первая  характеристика
+ которого п.в. в $D$   удовлетворяет условию
+\begin{equation}\label{Kondrqc}
+p(z)\leq Q\equiv\const,
+\end{equation}
+называется $Q$-\textit{квазиконформным}. Если условие~(\ref{Kondrqc}) выполняется в $D$ локально (то есть со своим $Q=Q(D')$ для всякой области $D'\Subset D$), то отображение
+называется \textit{локально квазиконформным}.
+Условие $\esssup\nolimits_{D}|\mu(z)|<1$~($\esssup\nolimits_{D'}|\mu(z)|<1$ для всякой области $D'\Subset D$) эквивалентно условию квазиконформности (локальной квазиконформности).
+
+Следует отметить, что в настоящее время известны более точные условия существования и единственности уравнения Бельтрами, чем  условие $\esssup\nolimits_{D'}|\mu(z)|<1$ (см., например, \cite{KondrMikl1,KondrMikl}).
+
+Уравнение Бельтрами с  $|\mu(z)|<1$   п.в. в $D$ будем в дальнейшем называть  \emph{классическим}. Случаи
+$|\mu(z)|<1$ п.в. в $D$ и $|\mu(z)|>1$
+ п.в. в $D$ отличаются тем, что в первом случае гомеоморфные решения не меняют  ориентацию, а во втором меняют.
+Различие здесь лишь формальное.
+Интерес представляет ситуация, когда одновременно существуют  подобласти $D$, в которых п.в. выполнено $|\mu(z)|<1$, и
+подобласти $D$, в которых  п.в. $|\mu(z)|>1$. В этом случае
+говорится, что уравнение Бельтрами имеет
+\emph{переменный} тип.
+Его решения описывают отображения со складками, сборками и т. п.
+Задача исследования таких уравнений  была поставлена Л.И.~Волковыским~\cite{KondrVolkovyskii}, а ряд успехов в этом направлении был сделан в работах~\cite{KondrSrYak,KondrSrYak3}.
+Некоторые результаты в этом направлении
+были установлены  нами в работах~\cite{KondrSibMat,KondrVV2016}.
+
+
+Уравнению~(\ref{KondrBeltrami1}) будем ставить в соответствие (\emph{классическое}) уравнение Бельтрами с комплексной дилатацией
+\begin{equation}\label{mu1}
+\mu^{*}(z)=\biggl\lbrace
+\begin{array}{ll}
+\mu(z)& \ \mbox{при} \  \    |\mu(z)|\leq1,\\[5pt]
+1 / \overline{\mu}(z)& \ \mbox{при} \ \   |\mu(z)|>1.
+\end{array}
+\biggr.\nonumber
+\end{equation}
+ Это уравнение называем в дальнейшем  \emph{уравнением,  ассоциированным с  уравнением~\emph{(\ref{KondrBeltrami1})}}.
+
+Очевидно,  ${|\mu^{*}(z)|<1}$ п.в. в $D$,
+причем в  классическом случае $\mu(z)=\mu^{*}(z)$.
+
+Тесная взаимосвязь между решениями ассоциированного уравнения и  первоначального уравнения~(\ref{KondrBeltrami1}) была показана
+в \cite{KondrYak,KondrSibMat,KondrVV2014}.
+
+Пусть имеется функция $f(z):D\to\RR$. Если существует
+функция $K(z)\in W^{1,2}(D)$, такая, что
+$$f(z)\leq K(z),$$
+ то функция $f(z)$ называется  \emph{$W^{1,2}$-ма\-жо\-ри\-руе\-мой} в $D$.
+Если $f(z)$ является \emph{$W^{1,2}$-ма\-жо\-ри\-руе\-мой}
+во всякой подобласти $D'\Subset D$, то говорят, что
+$f(z)$ является \emph{локально $W^{1,2}$-ма\-жо\-ри\-руе\-мой}
+в $D$.
+Для краткости вместо <<локально $W^{1,2}$-ма\-жо\-ри\-руе\-ма>>
+всюду ниже будем писать <<$W^{1,2}_{\mathrm{loc}}$-ма\-жо\-ри\-ру\-е\-ма>>.
+
+
+Если функция $f$
+абсолютно непрерывна внутри почти всех сечений \footnote{То есть на произвольных отрезках, лежащих в упомянутых сечениях.}
+области $D$ прямыми параллельными осям координат,  то будем говорить, что
+$f$ принадлежит классу $ACL$~в~$D$, кратко записывая это в виде <<$f\in ACL$~в~$D$>>.
+В дальнейшем связь между функциями классов Соболева и функциями класса $ACL$ предполагается
+известной~(см., например, \cite[c.~14]{KondrMaz} или \cite[с.~122]{KondrGR}).
+
+%Помимо вышесказанного мы будем допускать наличие особенностей у решений (\ref{KondrBeltrami1}).
+%Уточним это понятие.
+
+ Пусть  существует  замкнутое относительно $D$ множество  $E\subset D$ меры $\mes_2E=0$. Если непрерывная в $D$ функция $f(z)$  является решением уравнения  (\ref{KondrBeltrami1})
+в  $D\setminus E${ }\footnote{При этом не известна принадлежность  $f\in W^{1,2}_{\mathrm{loc}}(D)$.}, то функцию $f(z)$ будем называть \emph{решением с особенностью} $E$ данного уравнения.
+
+Наличие особенностей у решений характерно
+для уравнений~(\ref{KondrBeltrami1}) \emph{вырождающихся}
+ на некотором множестве $E$, то есть таком $E$, что
+$$\essinf_{B_r(z)\bigcap D}||\mu(z)|-1|=0$$
+для всякого $r>0$, где $B_r(z)$ --- круг с центром $z\in E$.
+При этом в качестве $E$ часто выступает множество
+раздела между
+$\{z: z\in D, |\mu(z)|<1\}$ и $\{z: z\in D, |\mu(z)|>1|\}.$
+
+%\section{Сравнение вырождающихся уравнений}
+%\label{KondrRazdel3}
+
+\section{Уравнения Бельтрами с вырождением}
+
+  Пусть $D\subset\CC$
+--- односвязная область и $v=T (z):D\to T(D)\subset\CC$
+--- некоторый  гомеоморфизм,  сохраняющий ориентацию.
+
+Определим  в $D$ функцию
+\begin{eqnarray}
+\dilat_T(z)=\limsup_{r\to0}\frac{\max_{|z'-z|=r}|T(z')-T(z)|}
+{\min_{|z'-z|=r}|T(z')-T(z)|}.\nonumber
+\end{eqnarray}
+
+Известно~\cite[гл. 1, \S4]{KondrBel}, что если $\dilat_T(z)<+\infty$ всюду в $D$ и $\dilat_T(z)\leq Q$ ($Q\ge1$~--- константа) п.в. в $D$, то отображение $T(z)$ $Q$-квазиконформно в области $D$ и, как следствие, дифференцируемо п.в. в $D$,  имеет п.в.  в $D$ комплексную дилатацию $\mu_0(z)=T_{\bar{z}}(z)/T_{z}(z)$,  первую характеристику Лаврентьева $p_T(z)$,
+якобиан
+$I(z)=\frac{\partial (v_1,v_2)}{\partial (x_1,x_2)}>0$ и    в точках дифференцируемости
+  $p_T(z)=\dilat_T(z)=P_{\mu_0}(z)$.
+
+
+
+
+Относительно $T(z)$  будет допускаться возможность
+вырождения, но при этом будут налагаться следующие ограничения:
+
+
+\noindent(A1) \ множество вырождения отображения $T(z)$
+$$E=\{z:z\in D,
+\sup_{z'\in B_r(z)\cap D} \dilat_T(z')
+=+\infty \ \  \mbox{для всякого круга}  \ \ B_r(z)\}, $$
+имеет меру   $\mes_2E=0$;
+
+
+
+\noindent(A2) \
+для отображения $T(z)$ выполняется $N$-свойство~\cite[гл. 5, \S1, п.~1.1]{KondrGR}: всякое
+множество $E_0\subset D$ меры $\mes_2 E_0=0$ переходит в
+множество $T(E_0)\subset T(D)$ меры~$\mes_2 T(E_0)=0$.
+
+
+
+
+Нетрудно видеть, что условие (A1) гарантирует замкнутость  множества $E$ относительно $D$ и локальную  квазиконформность  отображения $T(z)$ в  $D\setminus E$.
+В силу квазиконформности отображение $T(z)$
+дифференцируемо  п.в. в
+$D\setminus E$, а следовательно, и в $D$.
+При  этом у него п.в. определена
+комплексная характеристика $\mu_0(z)$, первая
+характеристика Лаврентьева $p(z)=P_{\mu_0}(z)=\dilat_T(z)$ и
+якобиан $I(z)$.
+Кроме того, при вышеуказанных  условиях \noindent(A1),  \ \noindent(A2) \
+справедлива  формула замены переменной  в интеграле~\cite[гл. 5, \S1, п. 1.4, теорема 1.8]{KondrGR}: для любой подобласти $D'\Subset D$ и любой суммируемой функции $f(v)$, заданной в
+$T(D')$, имеет место равенство
+$$\iint\limits_{T(D')}f(v)dv_1dv_2=\iint\limits_{D'}f(T(z))I(z)dx_1dx_2.$$
+
+
+По данному отображению $T(z)$ определим класс функций
+$T^{*}W^{1,2}_{\mathrm{loc}}(D)$, как множество функций
+вида $f(z)=\varphi(T(z))$, где $\varphi\in W^{1,2}_{\mathrm{loc}}(T(D))$.
+
+ Заметим, что в случае $E=\emptyset$ отображение $T(z)$ локально квазиконформно в $D$
+и, следовательно, $T(z)\in W^{1,2}_{\mathrm{loc}}(D)$. Поэтому,  в силу  инвариантности классов $W^{1,2}_{\mathrm{loc}}$ при  квазиконформных отображениях (см., например,  \cite[гл. 5, \S4, п.~4.1, теорема 4.2]{KondrGR}),
+заключаем, что $T^{*}W^{1,2}_{\mathrm{loc}}(D)=W^{1,2}_{\mathrm{loc}}(D).$
+Следовательно, при $E\ne\emptyset$,
+если $f(z)\in T^{*}W^{1,2}_{\mathrm{loc}}(D)$, то
+$f(z)\in W^{1,2}_{\mathrm{loc}}({D\setminus E})$.
+
+
+
+ В работе~\cite{KondrSibMat} была установлена следующая теорема, играющая для нас
+ ключевую роль.
+\begin{thm} \label{KondrOsnTeor1}
+Пусть $D\subset\CC$ --- односвязная область; $v=T(z):D\to T(D)\subset\CC$ --- гомеоморфное отображение со свойствами  \emph{(A1), (A2),} имеющее комплекcную характеристику $\mu_0(z)$.
+Предположим, что для всякой подобласти $D'\Subset D$ можно
+указать  функцию $K(z)\in W^{1,2}(D')$ такую, что
+$$
+\iint\limits_{D'}P_{{\mu_0}}(z)
+|\nabla K(z)|^2dx_1dx_2<+\infty,
+$$
+\begin{eqnarray}
+\label{KondrNermaj2}
+\frac{|\mu(z)-{\mu_0}(z)|^2}
+{(1-|{\mu_0}(z)|)|(1-|\mu(z)|)|}&\leq& K(z) \ \ \mbox{п.в. в $D'$},\nonumber
+\end{eqnarray}
+$$
+K(T^{-1}(v)) \in ACL \mbox{\ в \ } T(D').
+$$
+Тогда  существует $w=f(z):D\to f(D)\subset\CC$ --- гомеоморфное  решение  с особенностью $E$ уравнения, ассоциированного с~\emph{(\ref{KondrBeltrami1})}. При этом
+ $f(z)\in T^{*}W^{1,2}_{\mathrm{loc}}(D)$, $f^{-1}(w)\in W^{1,2}_{\mathrm{loc}}(f(D\setminus E))$ и
+в представлении $f(z)=\varphi(T(z))$
+отображение $\varphi$
+имеет $W^{1,2}_{\mathrm{loc}}$-ма\-жо\-ри\-ру\-е\-мую
+первую характеристику.
+Гомеоморфизм $w=f(z)$ единственен с точностью до
+конформного отображения в $w$-плоскости.
+\end{thm}
+
+
+
+
+
+
+
+\begin{remn}\label{KondrSohrACL}\rm Принадлежность $K(T^{-1}(v))$ классу $ACL$ в $T(D')$ в некоторых случаях выполняется автоматически, являясь следствием свойства отображения $v=T(z)$  сохранять  этот класс.
+Примером отображения, сохраняющего класс $ACL$, является
+\begin{equation}
+\FF_\delta(z)=f_\delta(x_1)+i x_2, \ \ \ f_\delta(t)=\int_0^t\delta (\tau)d\tau,
+\nonumber
+\end{equation}
+где  $\delta (t)$ --- положительная непрерывная
+при $t\ne 0$ функция, имеющая интегрируемую особенность в нуле.
+Несложно проверить, что
+если  $K(z)\in ACL$ в $D$, то  $K(\FF^{\;-1}_\delta(v))\in ACL$ в $\FF_{\delta}(D)$.
+\end{remn}
+
+
+
+\section{Вырождение на линии}
+
+
+
+Пусть существует жорданова дуга $E\subset D$, делящая область $D$ на две
+односвязные подобласти $D_1$ и $D_2$, причем  на $E$ уравнение~(\ref{KondrBeltrami1}) вырождается, а
+ характер вырождения описывается следующими условиями (B1), (B2).
+
+
+
+\noindent(B1) \ Справедливо
+представление
+\begin{eqnarray}
+|\mu(z)|=1+M(z)\delta (H(z)),\label{Kondrpredst1}\nonumber
+\end{eqnarray}    где  $M(z)$ --- измеримая, п.в.  конечная в $D$ функция;
+$\delta (t)$ --- непрерывная функция, такая, что
+$\delta (t)>0$ при $t\ne 0$ и $\delta (0)=0$;
+ $H(z)\in C(D)\cap
+W^{1,2}_{\mathrm{loc}}(D)$, причем $\nabla
+H(z)\ne 0$  п.в.  в $D$ и $H(z)<0$ в $D_1$, $H(z)>0$ в
+$D_2$.
+
+
+
+\noindent(B2) \ Существует непрерывная функция
+$Z(z)\in W^{1,2}_{\mathrm{loc}}(D)$,
+такая, что отображение
+$$
+J(z)=H(z)+i  Z(z)\in C(D)\cap
+W^{1,2}_{\mathrm{loc}}(D)
+$$
+является локально квазиконформным
+гомеоморфизмом $D$ на $J(D)$, сохраняющим ориентацию.
+
+Из условия (B1) следует, что
+$H(z)=0$  --- уравнение кривой~$E$.
+
+Пусть в дальнейшем
+$I_1(z)=
+H_{x_1}Z_{x_2}-H_{x_2}Z_{x_1}$
+--- якобиан  отображения $J(z)$, $p_{J}(z)$~--- его первая характеристика Лаврентьева,~а
+$Q_J(D')=\esssup_{D'}p_{J}(z)\geq1.$ Тогда в силу квазиконформности $J(z)$ в~$D'$, п.в. имеем
+\begin{equation}\label{KondrNer3}
+    |\nabla H(z)|^2+|\nabla
+    Z(z)|^2\leq2Q_J(D')I_1(z)\leq2Q_J(D')|\nabla H(z)||\nabla Z(z)|.
+\end{equation}
+
+
+Далее, для произвольной вещественной функции
+$f(z)$, имеющей градиент в точке $z\in D$,
+будем пользоваться отождествлениями
+$\nabla f(z)=f_{x_1}+i f_{x_2}$ и
+$\overline{\nabla f(z)}=f_{x_1}-i f_{x_2}.$
+
+Введем в рассмотрение следующую измеримую функцию
+$$
+S(z)=\left\lbrace\begin{array}{cl}
+  \frac{\nabla H}{\overline{\nabla H}} & \mbox{при} \ z\in D_1, \ \mbox{таких что } \nabla H \mbox{существует и} \nabla H\ne0,\\[15pt]
+  \frac{\nabla Z}{\overline{\nabla Z}}& \mbox{при} \  z\in D_2, \ \mbox{таких что } \nabla Z \mbox{существует и} \nabla Z\ne0,\\[15pt]
+  1& \mbox{в остальных случаях.}
+\end{array}\right.
+$$
+
+Предположим, что функция $\frac{1}{\delta(t)}$ имеет интегрируемую слева особенность в нуле.
+Тогда можно определить функции
+$$
+\delta^{*}(t)=\left\lbrace\begin{array}{ccc}
+  \delta(t) & \mbox{при} & t>0, \\[5pt]
+  \frac{1}{\delta(t)} & \mbox{при} & t<0,
+\end{array}\right. \ \ \ \ \ \ \ \ f_{\delta^{*}}(t)=\int_0^t{\delta^{*}} (\tau)d\tau, \ \ \ \ \ \ \
+\FF_{\delta^{*}}(z)=f_{\delta^{*}}(x_1)+i x_2.
+$$
+
+
+Основным результатом настоящей работы является следующее утверждение.
+
+\begin{thm}
+\label{Kondrt7} Предположим, что выполняются условия  \emph{(B1), (B2)} и    функция
+$\frac{1}{\delta(t)}$ имеет интегрируемую слева особенность в нуле. Кроме того, предположим,
+что  для всякой подобласти $D'\Subset D$ можно указать
+функцию $K(z)\in
+W^{1,2}(D')$ такую, что
+\begin{equation}
+\iint\limits_{D'}
+\frac{|\nabla K(z)|^2}{\delta(H)}dx_1dx_2<+\infty,
+\nonumber
+\end{equation}
+причем для п.в.  $z\in D'$
+\begin{equation}
+\label{KondrUs2t7}\nonumber
+\frac{1}{|M(z)|\delta^2(H)}\left|\mu(z)-S(z)\right|^2+\frac{1}{|M(z)|}\leq K(z).
+\end{equation}
+
+Положим $T(z)=\FF_{\delta^{*}}(J(z))$.
+Тогда  существует гомеоморфизм $w=f(z):D\to f(D)\subset\CC$,  для которого справедливы утверждения:
+
+
+\noindent \ \ \ \ \emph{(}i\emph{)}   $f(z)$ есть решение с особенностью $E$ уравнения, ассоциированного с~\emph{(\ref{KondrBeltrami1})};
+
+
+\noindent \ \ \ \ \emph{(}ii\emph{)}   $f(z)\in T^{*}W^{1,2}_{\mathrm{loc}}(D)$,
+ $f^{-1}(w)\in W^{1,2}_{\mathrm{loc}}(f(D\setminus E))$ и
+в представлении
+\begin{equation}
+\label{Kondrpreds3}
+f(z)=\varphi(T(z))=\varphi(\FF_{\delta^{*}}(J(z)))\nonumber
+\end{equation}
+отображение $\varphi$
+имеет $W^{1,2}_{\mathrm{loc}}$-ма\-жо\-ри\-ру\-е\-мую
+первую характеристику.
+Гомеоморфизм $w=f(z)$ единственен с точностью до
+конформного отображения в $w$-плоскости.
+\end{thm}
+В ~\cite[теоремы 3, 4]{KondrSibMat}, были описаны два принципиально различных  характера вырождения уравнения (\ref{KondrBeltrami1}) вдоль $E$,  при которых  существует единственное гомеоморфное  решение соответствующего ассоциированного уравнения, а также описана  структура такого решения;  немного позже, в \cite{KondrVV2014},  было показано, что эти условия являются
+слабыми версиями следующих условий:
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  dz+\mu(z)\overline{dz} &\ne& 0, \label{KondrMu1}\\
+  dz+\mu(z)\overline{dz} &=& 0, \label{KondrMu2}
+\end{eqnarray}
+где $dz$ направлено по касательной к $E$. Условие (\ref{KondrMu1})  использовалось ранее в работах  Якубова и Сребро~\cite[теорема 4.4, c.~70]{KondrSrYak4}, а  (\ref{KondrMu2}) было рассмотрено в \cite{KondrSibMat,KondrVV2014} впервые.
+Теорема \ref{Kondrt7} показывает,  что возможен также вариант разнотипного вырождения уравнения Бельтрами, при котором характеры вырождения различны по разные стороны от~$E$.
+
+
+ \noindent\textbf{Доказательство теоремы \ref{Kondrt7}.} Пусть $z\in D_2$.
+  В развернутом виде  $T(z)=f_{\delta}(H)+i Z$ и
+для отображения
+$v=T(z)$
+получаем
+$$\frac{\partial(v_1,v_2)}{\partial(x_1,x_2)}=\biggl|
+\begin{array}{cc}
+\delta(H) H_{x_1}&\delta(H) H_{x_2}\\
+Z_{x_1}&Z_{x_2},
+\end{array}
+\biggr|=\delta(H) I_1(z),$$
+\begin{eqnarray}
+\frac{\partial T(z)}{\partial z}=\frac12\left(
+\delta(H)\overline{\nabla H} +i\overline{\nabla Z}
+\right),  \  \
+\frac{\partial T(z)}{\partial {\bar z}}
+&=&\frac12\left(
+\delta(H)\nabla H +i\nabla Z
+\right),
+\nonumber
+\end{eqnarray}
+откуда
+\begin{eqnarray}{\mu_0}(z)=\frac{\partial T(z)}{\partial {\bar z}}\left/
+\frac{\partial T(z)}{\partial z}\right.&=&
+\frac{\delta(H)\nabla H +i\nabla Z}{\delta(H)\overline{\nabla H} +i\overline{\nabla Z}}=
+\frac{\nabla Z-i\delta(H)\nabla H}{\overline{\nabla Z}-i\delta(H)\overline{\nabla H}}
+.\label{Kondrodinminusmuquadrat1}
+\end{eqnarray}
+Отображение $v=T(z)$ сохраняет ориентацию, следовательно ${|\mu_0(z)|<1}$ п.в.  в~$D_2$.
+Имеем
+\begin{eqnarray}\label{KondrOz1}
+|\mu-{\mu_0}|^2\leq
+\left| \left| \mu-\frac{\nabla
+Z}{\overline{\nabla Z}}\right|+ \left|
+\frac{\nabla Z}{\overline{\nabla Z}}-{\mu_0}
+\right|\right|^2
+\leq 2\left| \mu-\frac{\nabla
+Z}{\overline{\nabla
+Z}}\right|^2+2\left|\frac{\nabla
+Z}{\overline{\nabla Z}}-{\mu_0} \right|^2,
+\\
+\frac{\nabla Z}{\overline{\nabla Z}}- {\mu_0}=
+\frac{\nabla Z}{\overline{\nabla Z}}-
+\frac{\nabla Z-i\delta(H)\nabla
+H}{\overline{\nabla Z}-i\delta(H)\overline{\nabla
+H}}=\frac{2\delta(H) I_1(z)}{\overline{\nabla Z}(\overline{\nabla Z}-i\delta(H)\overline{\nabla H})}.\label{KondrZ1}
+\end{eqnarray}
+Для $z\in D_1$ аналогично имеем  $T(z)=f_{\frac1\delta}(H)+i Z$, откуда
+$$\frac{\partial(v_1,v_2)}{\partial(x_1,x_2)}=\biggl|
+\begin{array}{cc}
+\frac{1}{\delta(H)} H_{x_1}&\frac{1}{\delta(H)} H_{x_2}\\
+Z_{x_1}&Z_{x_2}
+\end{array}
+\biggr|=\frac{1}{\delta(H)} I_1(z),$$
+\begin{eqnarray}
+\frac{\partial T(z)}{\partial z}=\frac12\left(
+\frac{1}{\delta(H)}\overline{\nabla H} +i\overline{\nabla Z}
+\right), \  \
+\frac{\partial T(z)}{\partial {\bar z}}= \frac12\left(
+\frac{1}{\delta(H)}\nabla H +i\nabla Z
+\right),
+\nonumber
+\end{eqnarray}
+\begin{eqnarray}{\mu_0}(z)&=&\frac{\partial T(z)}{\partial {\bar z}}\left/
+\frac{\partial T(z)}{\partial z}\right.=
+\frac{\nabla H +i\delta(H)\nabla Z}{\overline{\nabla H} +i\delta(H)\overline{\nabla Z}},\label{mu2}\nonumber
+\end{eqnarray}
+%Как и в предыдущей теореме $v=T(z)$ сохраняет ориентацию и, следовательно,  ${|\mu_0(z)|<1}$ п.в.  в $D$.
+%Далее, устанавливаем оценку, аналогичную (\ref{KondrOz1})
+
+\begin{eqnarray}\label{KondrH1}
+|\mu-{\mu_0}|^2
+\leq 2\left| \mu-\frac{\nabla
+H}{\overline{\nabla
+H}}\right|^2+2\left|\frac{\nabla
+H}{\overline{\nabla H}}-{\mu_0} \right|^2,\\
+\frac{\nabla H}{\overline{\nabla H}}- {\mu_0}=
+\frac{2\delta(H) I_1(z)}{\overline{\nabla H}(\overline{\nabla H}-i\delta(H)\overline{\nabla Z})}. \label{KondrH2}
+\end{eqnarray}
+
+
+Зафиксируем подобласть $D'\Subset D$. Тогда для
+п.в.  $z\in D'\bigcap D_2$ с учетом~(\ref{KondrNer3}), (\ref{KondrOz1}), (\ref{KondrZ1}) получаем
+\begin{eqnarray}
+\left| \frac{\nabla Z}{\overline{\nabla Z}}-
+{\mu_0} \right|^2= \frac{4\delta^2(H) I_1^2(z)}{|\nabla
+Z|^2(|\nabla Z|^2+\delta^2(H)|\nabla
+H|^2+2\delta(H)
+I_1(z))}
+\leq16Q_J^2(D')\delta^2(H),&&
+\label{KondrNer4}
+\end{eqnarray}
+\begin{eqnarray}
+&|\nabla
+Z|^2+\delta^2(H)|\nabla H|^2+2\delta(H) I_1(z)\leq
+ C_1(D')I_1(z),& \label{KondrNer4plus}
+\end{eqnarray}
+где $C_1(D')=2Q_J(D')\max\{1,\sup_{D'}(\delta^2(H))\}+
+2\sup_{D'}(\delta(H))\geq1$.
+
+Аналогично для п.в.  $z\in D'\bigcap D_1$ с учетом~(\ref{KondrNer3}), ~(\ref{KondrH1}),  ~(\ref{KondrH2}) имеем:
+\begin{eqnarray}
+\left| \frac{\nabla H}{\overline{\nabla H}}-
+{\mu_0} \right|^2=
+\frac{4\delta^2(H) I_1^2(z)}{|\nabla H|^2(|\nabla
+H|^2+\delta^2(H)|\nabla Z|^2+2\delta(H) I_1(z))}
+\leq
+&16Q_J^2(D')\delta^2(H),\label{KondrNer5}\nonumber
+\\
+|\nabla
+H|^2+\delta^2(H)|\nabla Z|^2+2\delta(H) I_1(z)\leq
+ C_1(D')I_1(z), \label{KondrHZ-ner}\nonumber
+\end{eqnarray}
+где $C_1(D')=2Q_J(D')\max\{1,\sup_{D'}(\delta^2(H))\}+
+2\sup_{D'}(\delta(H))\geq1.$
+
+Используя (\ref{Kondrodinminusmuquadrat1}) и (\ref{KondrNer4plus}), для $z\in D_2$ получаем
+$$
+1-|{\mu_0}(z)|=\frac{4\delta(H) I_1(z)}{
+(1+|{\mu_0}(z)|)\left( |\nabla
+Z|^2+\delta^2(H)|\nabla H|^2+2\delta(H) I_1(z)
+\right) } \geq\frac{1}{C_1(D')}\delta(H).$$
+Отсюда с учетом~(\ref{KondrOz1}), (\ref{KondrNer4}) и соотношений
+$|1-|\mu(z)||=|M(z)|\delta(H),
+\ \ Q_J(D')\geq1$ приходим к оценке
+\begin{eqnarray}
+&&\frac{|\mu-{\mu_0}|^2}{|(1-|\mu(z)|)(1-|{\mu_0}(z)|)|}\leq
+\frac{2\left| \mu-\frac{\nabla
+Z}{\overline{\nabla
+Z}}\right|^2+2\left|\frac{\nabla
+Z}{\overline{\nabla Z}}-{\mu_0}
+\right|^2}{\frac{1}{C_1(D')}|M(z)|\delta^2(H)}\leq
+\nonumber\\
+&&\leq C_2(D')\left(
+\frac{1}{|M(z)|\delta^2(H)}\left|
+\mu-\frac{\nabla Z}{ \overline{\nabla Z}}
+\right|^2+\frac{1}{|M(z)|} \right),  \label{Kondroc1}\\
+&&\ \ \ C_2(D')=32Q_J^2(D')C_1(D').\nonumber
+\end{eqnarray}
+
+
+ Далее, снова пользуясь (\ref{KondrNer3}), устанавливаем  оценку
+\begin{equation}\label{lavrharoc}
+P_{\mu_0}(z)\leq
+\frac{C_3(D')}{\delta(H)}.
+\end{equation}
+Так как $z\in D_2\bigcap D'$, то имеем
+$$
+P_{\mu_0}(z)=\frac{1+|\mu_0|}{1-|{\mu_0}|}\leq2
+\frac{1+|{\mu_0}|^2}{1-|{\mu_0}|^2}=
+\frac{\delta^2(H)|\nabla H|^2+|\nabla
+Z|^2}{\delta(H) I_1(z)}\leq
+\frac{C_3(D')}{\delta(H)},
+$$
+где
+$C_3(D')=2Q_J(D')\max\{\sup_{D'}(\delta^2(H)),1\}.$
+
+Рассуждая аналогично,
+устанавливаем неравенство вида (\ref{lavrharoc}) для случая $z\in D_1\bigcap D'$.
+
+В силу (\ref{lavrharoc}) для всякой функции $K(z)\in W^{1,2}_{\mathrm{loc}}(D')$ имеем неравенство
+\begin{eqnarray}
+\iint\limits_{D'}P_{\mu_0}(z)
+|\nabla K(z)|^2dx_1dx_2\leq C_3(D')\iint\limits_{D'}\frac{ |\nabla
+K(z)|^2}{\delta(H)}dx_1dx_2.
+\label{Kondroc2}
+\end{eqnarray}
+
+
+Имеем $z=T^{-1}(v)=J^{-1}(F^{\;-1}_{\delta^{*}}(v))$.
+Пусть $\zeta =F^{\;-1}_{\delta^{*}}(v).$
+Тогда $v=\FF_{\delta^{*}}(\zeta )$, $\zeta =J(z)$. Так как отображение
+$\zeta =J(z)$ локально квазиконформно, то обратное к нему
+$z=J^{-1}(\zeta )$ также локально квазиконформно, и, следовательно,
+$J^{-1}(\zeta )\in W^{1,2}_{\mathrm{loc}}(J(D')).$
+Поскольку  $K(z)\in
+W^{1,2}_{\mathrm{loc}}(D')$, то в силу
+инвариантности класса $W^{1,2}_{\mathrm{loc}}$
+при квазиконформных отображениях имеем
+$\tilde{K}(\zeta )=K(J^{-1}(\zeta ))\in
+W^{1,2}_{\mathrm{loc}}(J(D'))$ и по замечанию~\ref{KondrSohrACL} заключаем о принадлежности
+$K(T^{-1}(v))=\tilde{K}(\FF_{\delta^{*}}^{\;-1}(v))\in ACL$ в $T(D')$.
+
+Очевидно,    кривая $E$ есть множество вырождения $T(z)=\FF_{\delta^{*}}(J(z))$ и выполняются  условия (A1), (A2).
+Таким образом, полученные оценки~(\ref{Kondroc1}),
+(\ref{Kondroc2}) обеспечивают выполнение условий
+теоремы~\ref{KondrOsnTeor1}.
+Теорема доказана.
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{KondrBel}
+\baut{Белинский}{П.  П.}
+\btit{Общие свойства квазиконформных отображений}[General Properties
+of Quasiconformal Mappings]
+\bcity{Новосибирск}
+\bpub{Наука. Сиб. отд-ние}
+\byr{1974}
+\bpp{100}
+\mkbookr
+
+\bibitem{KondrVekua}
+\baut{Векуа}{И.  Н.}
+\btit{Обобщенные аналитические функции}[Generalized analytic
+functions]
+\bcity{М.}
+\bpub{Наука}
+\byr{1988}
+\bpp{512}
+\mkbookr
+
+
+\bibitem{KondrVolkovyskii}
+\baut{Волковыский}[Volkovyski\v{\i}]{Л. И.}
+\btit{Некоторые вопросы теории квазиконформных отображений}[Some problems of the theory of quasiconformal mappings]
+\bj{Некоторые проблемы математики и механики}[Some Problems of Mathematics and Mechanics]
+\bcity{Л.}
+\bpub{Наука}
+\byr{1970}
+\bpp{128--134}
+\mkprocr
+
+
+\bibitem{KondrGR}
+\baut{Гольдштейн}{В. М.}
+\baut{Решетняк}{Ю. Г.}
+\btit{Введение в теорию функций с
+обобщенными производными и квазиконформные отображения}[Quasiconformal Mappings and Sobolev Spaces]
+\bcity{М.}
+\bpub{Наука}
+\byr{1983}
+\bpp{284}
+\mkbookr
+
+
+\bibitem{KondrVV2016}
+\baut{Кондрашов}{А.Н.}
+\btit{Изотермические координаты на склейках}[Isothermic coordinates on sewing surfaces]
+\bj{Вестник Волгоградского государственного университета. Серия 1, Математика. Физика}
+\byr{2016}
+\bnum{6 (37)}
+\bpp{70--80}
+\mkpaperr
+
+\bibitem{KondrSibMat}
+\baut{Кондрашов}{А. Н.}
+\btit{К теории вырождающихся уравнений Бельтрами переменного типа}[On the theory of degenerate alternating beltrami equations]
+\bj{Сиб. мат. журн.}
+\byr{2012}
+\bvol{53}
+\bnum{6}
+\bpp{1321--1337}
+\mkpaperr
+
+
+\bibitem{KondrVV2013}
+\baut{Кондрашов}{А. Н.}
+\btit{К теории уравнения Бельтрами переменного типа со многими складками}[On the theory of alternating Beltrami equation
+with many folds]
+\bj{Вестник Волгоградского государственного университета. Серия 1, Математика. Физика}
+\byr{2013}
+\bnum{2 (19)}
+\bpp{26--35}
+\mkpaperr
+
+\bibitem{KondrVV2014}
+\baut{Кондрашов}{А. Н.}
+\btit{Уравнения Бельтрами, вырождающиеся на дуге}[Beltrami equations with degenerate on arcs]
+\bj{Вестник Волгоградского государственного университета. Серия 1, Математика. Физика}
+\byr{2014}
+\bnum{5 (24)}
+\bpp{24--39}
+\mkpaperr
+
+\bibitem{KondrVV2015}
+\baut{Кондрашов}{А. Н.}
+\btit{Уравнения Бельтрами переменного типа и конформные
+мультискладки}[Alternating beltrami equation and conformal multifolds]
+\bj{Вестник Волгоградского государственного университета. Серия 1, Математика. Физика}
+\byr{2015}
+\bnum{5 (30)}
+\bpp{6--24}
+\mkpaperr
+
+\bibitem{KondrMaz}
+\baut{Мазья}{В.Г.}
+\btit{Пространства С.Л. Соболева}[Sobolev Spaces]
+\bcity{Л.}
+\bpub{Изд-во ЛГУ}
+\byr{1985}
+\bpp{416}
+\mkbookr
+
+\bibitem{KondrMikl1}
+\baut{Миклюков}{В. М.}
+\btit{Изотермические координаты на поверхностях с особенностями}[Isothermic coordinates on singular surfaces]
+\bj{Мат. сб.}
+\byr{2004}
+\bvol{195}
+\bnum{1}
+\bpp{69--88} %%% Процитировать
+\mkpaperr
+
+\bibitem{KondrYak}
+\baut{Якубов}{Э.Х.}
+\btit{О решениях уравнения Бельтрами с вырождением}[Solutions of Beltrami's equation with degeneration]
+\bj{Доклады академии наук СССР}
+\byr{1978}
+\bvol{243}
+\bnum{5}
+\bpp{1148--1149}
+\mkpaperr
+
+\bibitem{KondrSrYak4}
+\baut{Gutlyanskii}{V.}
+\baut{Ryazanov}{V.}
+\baut{Srebro}{U.}
+\baut{Yakubov}{E.}
+\btit{The Beltrami Equations: A~Geometric Approach}
+\bpub{Springer}
+\bcity{New York}
+\byr{2012}
+\bpp{xiv+301}
+\mkbooke
+
+\bibitem{KondrLavr}
+\baut{Lavrentieff}{M.}
+\btit{Sur une classe de repr\'esentations continues}[-]
+\bj{Мат. сб.}
+\byr{1935}
+\bvol{42}
+\bnum{4}
+\bpp{407--424}
+%\badd{[имеется перевод: \ Об одном классе непрерывных
+%отображений // Лаврентьев, М. А. Избранные труды. Математика и механика / М. А. Лаврентьев. - М. : Наука, 1990. - C. 219--237.]}{}
+\mkpaperr
+
+
+\bibitem{KondrMikl}
+\baut{Martio}{O.}
+\baut{Miklyukov}{V. M.}
+\btit{On existence and uniqueness of degenerate Beltrami equations}
+\bj{Complex Variables}
+\byr{2004}
+\bnum{49}
+\bpp{647--656}
+\mkpapere
+
+\bibitem{KondrSrYak}
+\baut{Srebro}{U.}
+\baut{Yakubov}{E.}
+\btit{Branched folded maps and alternating Beltrami equations}
+\bj{Journal d'analyse mathematique}
+\byr{1996}
+\bnum{70}
+\bpp{65--90}
+\mkpapere
+
+\bibitem{KondrSrYak2}
+\baut{Srebro}{U.}
+\baut{Yakubov}{E.}
+\btit{$\mu$-Homeomorphisms}
+\bj{Contemporary Mathematics  AMS}
+\byr{1997}
+\bnum{211}
+\bpp{473--479}
+\mkpapere
+
+\bibitem{KondrSrYak3}
+\baut{Srebro}{U.}
+\baut{Yakubov}{E.}
+\btit{Uniformization of maps with folds}
+\bj{Israel mathematical conference proceedings}
+\byr{1997}
+\bnum{11}
+\bpp{229--232}
+\mkpapere
+
+\end{thebibliography}
+
+\begin{summary}
+Suppose that, in a simply-connected domain $D\subset{\Bbb C}$, we are given the Beltrami equation (see \cite[Chapter 2]{KondrVekua})
+$$f_{\overline{z}}(z)=\mu(z)f_{z}(z). \eqno{(*)}$$%
+
+We will call case of the Beltrami equation with $|\mu(z)| < 1$ a.e. in $D$ by classical. The cases $|\mu(z)| < 1$ a.e. in $D$ and $|\mu(z)| > 1$ a.e. in $D$ differ in that, in the first case homeomorphisms do not change sense,
+and in the second they do. The difference is but formal here. Of interest is the situation when there simultaneously exist subdomains in $D$ in which $|\mu(z)| < 1$ a.e. and subdomains $D$ in which $|\mu(z)| > 1$ a.e. In this case the Beltrami equation is said to be alternating. The problem of the study of alternating Beltrami equations was posed by Volkovyski\v{\i} \cite{KondrVolkovyskii}, and successful progress in this direction was made in \cite{KondrSrYak,KondrSrYak3}. Its solutions are described by mappings with folds, cusps, etc.
+
+Assign to (*) the classical Beltrami equation with complex dilation
+$$%4
+\mu^{*}(z)=\biggl\lbrace
+\begin{array}{ll}
+\mu(z)& \ \mbox{при} \  \    |\mu(z)|\leq1,\\
+1 / \overline{\mu}(z)& \ \mbox{при} \ \   |\mu(z)|>1.
+\end{array}
+\biggr.
+$$
+Below we call this equation associated with (*).
+
+
+%We aim at the study of the interrelation between the solutions to this equation and the solutions to the appropriate classical Beltrami equation. The importance of this interrelation was first observed in [8].
+
+
+Suppose that there exists a Jordan arc $E\subset D$ dividing the domain $D$ into two simply-connected
+subdomains $D_1$ and $D_2$. Suppose also that (\ref{KondrBeltrami1}) degenerates on
+$E$ and the nature of the degeneration is described by the following conditions:
+
+\noindent(B1)  The representation
+\begin{eqnarray}|\mu(z)|=1+M(z)\delta (H(z)),\nonumber%\label{Kondrpredst1copy}
+\end{eqnarray}
+holds, where $M(z)$ is a measurable a.e. finite function in $D$; $\delta (t)$ is a continuous function such that
+$\delta (t)>0$ for $t\ne 0$ and $\delta (0)=0$; $H(z)\in C(D)\cap
+W^{1,2}_{\mathrm{loc}}(D)$, and also $\nabla
+H(z)\ne 0$ a.e. in $D$ and $H(z)<0$ in $D_1$, $H(z)>0$ in
+$D_2$.
+
+\noindent(B2) \ there exists a continuous function $Z(z)\in W^{1,2}_{\mathrm{loc}}(D)$
+$$
+J(z)=H(z)+i  Z(z)\in C(D)\cap
+W^{1,2}_{\mathrm{loc}}(D)
+$$
+is a sense-preserving locally quasiconformal homeomorphism of $D$ onto $J(D)$.
+
+
+Obviously, (B1) \ implies that $H(z)=0$ is the equation of ~$ E$.
+In what follows, we suppose that
+$I_1(z)=H_{x_1}Z_{x_2}-H_{x_2}Z_{x_1}$ is the Jacobian of $J(z)$, while $p_{J}(z)$ is
+its first Lavrent'ev characteristic, and $Q_J(D')=\mathop{\mathrm{ess\,sup}}_{D'}p_{J}(z)\geq1$.
+Then, since $J(z)$ is quasiconformal
+in ~$D'$, a.e. we have
+\begin{equation}\nonumber
+    |\nabla H(z)|^2+|\nabla
+    Z(z)|^2\leq2Q_J(D')I_1(z)\leq2Q_J(D')|\nabla H(z)||\nabla Z(z)|.
+\end{equation}
+
+Throughout the sequel, given an arbitrary real function $f(z)$, having gradient at a point $z\in D$, we
+put $\nabla f(z)=f_{x_1}+i f_{x_2}$ and $\overline{\nabla f(z)}=f_{x_1}-i f_{x_2}.$ Also we put
+$$
+S(z)=\left\lbrace\begin{array}{ccc}
+  \frac{\nabla H}{\overline{\nabla H}} & \mbox{at} & z\in D_1, \\[15pt]
+  \frac{\nabla Z}{\overline{\nabla Z}}& \mbox{at} &  z\in D_2,
+\end{array}\right.
+$$
+\begin{equation}
+\FF_{\delta^{*}}(z)=f_{\delta^{*}}(x_1)+i x_2 \ \ \ \mbox{where} \ \ f_{\delta^{*}}(t)=\int_0^t{\delta^{*}} (\tau)d\tau.
+\nonumber
+\end{equation}
+
+%The following Theorem indicate conditions on $M$, $\delta$, $H$ and  $Z$ under which there exists
+%a homeomorphic solution with singularity $ E$ to the equation associated with ~(\ref{KondrBeltrami1})
+%and also describe the structure of these solutions.
+
+The main result of the article is as follows.
+
+\noindent\textbf{Theorem.} \begin{itshape}
+Suppose that (B1) and (B1) are fulfilled, while for every subdomain $D'\Subset D$ there is
+a function $K(z)\in W^{1,2}(D')$ such that
+\begin{equation}
+\iint\limits_{D'}\frac{
+|\nabla
+K(z)|^2}{\delta(H)}dx_1dx_2<+\infty,
+\nonumber
+\end{equation}
+and
+\begin{equation}
+\nonumber
+\frac{1}{|M(z)|\delta^2(H)}\left|\mu(z)-S(z)\right|^2+\frac{1}{|M(z)|}\leq K(z).
+\end{equation}
+for a.e. $z\in D'$.
+Put $T(z)=\EuScript{F}_{\delta^{*}}(J(z))$. Then there exists a homeomorphism $w=f(z):D\to f(D)\subset{\Bbb C}$
+such that
+
+\noindent \ \ \ \ \emph{(}i\emph{)}   $f(z)$
+ is a solution with singularity E to the equation associated with ~\emph{(*)};
+
+\noindent \ \ \ \ \emph{(}ii\emph{)}   $f(z)\in T^{*}W^{1,2}_{\mathrm{loc}}(D)$,
+$f^{-1}(w)\in W^{1,2}_{\mathrm{loc}}(f(D\setminus E))$, and, in the representation
+\begin{equation}
+\nonumber
+f(z)=\varphi(T(z))=\varphi(\EuScript{F}_{\delta^{*}}(J(z)))
+\end{equation}
+the mapping $\varphi$ has $W^{1,2}_{\mathrm{loc}}$- majorized first characteristic.
+
+This homeomorphic solution with singularity $E$ is unique $T^{*}W^{1,2}_{\mathrm{loc}}(D)$ up to composition with
+a conformal mapping.
+\end{itshape}
+
+\bigskip
+
+This result is a two-sided analog of Theorems 3, 4 of the paper~\cite{KondrSibMat}.
+
+\end{summary}
+
+
+
+%\today
+%\end{document}

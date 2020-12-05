@@ -1,0 +1,39 @@
+;window.onscroll = function() {
+
+  'use strict';
+
+  var m = document.querySelector("main"),
+    h = document.querySelector("header"),
+    c = document.querySelector(".counter"),
+    counter = 0,
+    hHeight;
+
+  function setTopPadding() {
+    hHeight = h.offsetHeight;
+    m.style.paddingTop = hHeight + "px";
+  }
+
+  function onScroll() {
+
+    window.addEventListener("scroll", _.throttle(callbackFunc, 200));
+    function callbackFunc() {
+      c.style.visibility = "visible";
+      c.innerHTML = counter++;
+      var y = window.pageYOffset;
+      if (y > 150) {
+        h.classList.add("scroll");
+      } else {
+        h.classList.remove("scroll");
+      }
+    }
+  }
+
+  window.onload = function() {
+    setTopPadding();
+    onScroll();
+  };
+
+  window.onresize = function() {
+    setTopPadding();
+  };
+};
