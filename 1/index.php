@@ -10,7 +10,7 @@
 		<header>
 			<nav style = "float:left;">
 				<h1>
-					НЕ Главная страница
+					Большая НЕ Главная страница
 				</h1>
 				<ul>
 					<li><a href="list.php">Список</a></li>
